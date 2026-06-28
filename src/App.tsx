@@ -2283,7 +2283,20 @@ export default function App() {
                   </div>
 
                   <button 
-                    onClick={loginWithGoogle}
+                    onClick={async () => {
+                      setAuthError('');
+                      try {
+                        await loginWithGoogle();
+                      } catch (err: any) {
+                        if (err?.code === 'auth/unauthorized-domain') {
+                          setAuthError('This domain is not authorized in Firebase. Please add it to Firebase Console → Authentication → Authorized Domains.');
+                        } else if (err?.code === 'auth/popup-closed-by-user' || err?.code === 'auth/cancelled-popup-request') {
+                          // User closed the popup — no need to show error
+                        } else {
+                          setAuthError(err?.message || 'Google sign-in failed. Please try again.');
+                        }
+                      }
+                    }}
                     className="w-full bg-white hover:bg-gray-50 border border-gray-300 hover:border-gray-400 text-gray-700 py-3 rounded-[4px] text-sm font-semibold transition duration-300 flex items-center justify-center gap-3 cursor-pointer shadow-sm"
                   >
                     {/* Official Google G icon */}

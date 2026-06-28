@@ -49,7 +49,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const loginWithGoogle = async () => {
     if (!isConfigured || !auth || !googleProvider) {
-      console.warn("Firebase is not configured. Falling back to mock Google login.");
+      // Only use mock in local dev when Firebase is not configured at all
+      console.warn("Firebase is not configured. Falling back to mock Google login for local dev.");
       const mockGoogleUser: AuthUser = {
         uid: 'mock_google_id_' + Date.now(),
         email: 'student@gmail.com',
@@ -71,18 +72,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         };
         setSessionState(unifiedUser, isUserAdmin ? 'admin' : 'student');
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Google Sign-In Error: ", error);
-      console.warn("Falling back to mock Google login due to Firebase error.");
-      const mockGoogleUser: AuthUser = {
-        uid: 'mock_google_id_' + Date.now(),
-        email: 'student@gmail.com',
-        displayName: 'Google User',
-        photoURL: null
-      };
-      setSessionState(mockGoogleUser, 'student');
+      // Re-throw so the UI can display the actual error to the user
+      throw error;
     }
   };
+
 
   const loginWithEmail = async (email: string, password: string, roleType: 'student' | 'admin') => {
     // Standard mock credentials check
