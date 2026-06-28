@@ -496,6 +496,19 @@ export default function App() {
       return;
     }
 
+    // ── Client-side file size check (50 MB hard limit) ───────────────────────
+    const MAX_FILE_SIZE_MB = 50;
+    const fileSizeMB = selectedFile.size / 1024 / 1024;
+    if (fileSizeMB > MAX_FILE_SIZE_MB) {
+      alert(
+        `File is too large: ${fileSizeMB.toFixed(1)} MB\n\n` +
+        `Maximum allowed upload size is ${MAX_FILE_SIZE_MB} MB.\n\n` +
+        `Please compress the file or split it into smaller parts.\n` +
+        `You can use ilovepdf.com (PDFs) or 7-Zip (documents) to reduce file size.`
+      );
+      return;
+    }
+
     setIsUploading(true);
     setUploadProgress(0);
     setUploadSuccessMark(false);
@@ -555,7 +568,20 @@ export default function App() {
       clearInterval(progressInterval);
       setIsUploading(false);
       console.error('Storage upload error:', storageError);
-      alert(`File upload to Storage failed:\n${storageError.message}\n\nPlease make sure the "academic-resources" bucket exists and has INSERT permissions enabled in your Supabase project.`);
+
+      const isSizeError = /size|too large|maximum|exceeded/i.test(storageError.message || '');
+      if (isSizeError) {
+        alert(
+          `Upload failed — file too large (${fileSizeMB.toFixed(1)} MB)\n\n` +
+          `Your Supabase Storage bucket has a size limit that this file exceeds.\n\n` +
+          `To raise the limit, go to:\n` +
+          `Supabase Dashboard → Storage → Buckets → academic-resources → Edit\n` +
+          `→ Set "Max file upload size" to 50 MB or higher.\n\n` +
+          `Alternatively, compress the file to under 50 MB before uploading.`
+        );
+      } else {
+        alert(`File upload to Storage failed:\n${storageError.message}\n\nPlease make sure the "academic-resources" bucket exists and has INSERT permissions enabled in your Supabase project.`);
+      }
       return; // STOP — do not insert metadata without a real file
     }
 
@@ -960,7 +986,7 @@ export default function App() {
               </div>
               
               <TextCursor text="🎓" spacing={60} maxPoints={8}>
-                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-tight">
+                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-tight break-words">
                   Cultivating Academic Giants <br />
                   Since 2014
                 </h2>
@@ -998,47 +1024,66 @@ export default function App() {
             </div>
 
             {/* Right – Animated Card Stack */}
-            <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex items-center justify-center" style={{ height: '300px' }} data-mobile-card-swap>
-              <CardSwap
-                width={420}
-                height={300}
-                cardDistance={55}
-                verticalDistance={65}
-                delay={2000}
-                pauseOnHover={true}
-                skewAmount={5}
-                easing="elastic"
-              >
-                <Card>
-                  <img src="/banner_swap_1.png" alt="Subjects Group Teaching" />
-                </Card>
-                <Card>
-                  <img src="/banner_swap_2.png" alt="Online Chapter" />
-                </Card>
-                <Card>
-                  <img src="/banner_swap_3.jpg" alt="AJ Banner" />
-                </Card>
-                <Card>
-                  <img src="/banner_swap_4.png" alt="Online Lecture" />
-                </Card>
-                <Card>
-                  <img src="/banner_swap_5.jpg" alt="AJ New Banner" />
-                </Card>
-              </CardSwap>
+            <div className="lg:col-span-5 mt-8 lg:mt-0">
 
-              {/* Outstanding Badge */}
-              <div className="absolute top-4 left-4 bg-white border-2 border-accent p-4 rounded-lg shadow-soft-hover max-w-[200px] hidden sm:block animate-pulse z-10">
-                <div className="flex items-center gap-2 mb-1">
-                  <Award className="w-5 h-5 text-accent" />
-                  <span className="font-bold text-xs text-primary uppercase font-mono">Outstanding</span>
+              {/* Mobile layout: 98% stat on left, CardSwap on right */}
+              <div className="flex items-center gap-3 lg:block">
+
+                {/* 98% Stat Card — only shown on mobile (left column) */}
+                <div className="flex-shrink-0 w-[44%] lg:hidden bg-primary text-white p-4 rounded-lg shadow-2xl border-b-4 border-accent self-center">
+                  <p className="text-5xl font-serif font-bold text-accent mb-1">98%</p>
+                  <p className="text-[11px] text-white/90 font-medium leading-snug">University Placement Success at Top-Tier Global &amp; Local Schools</p>
+                  <div className="mt-3 flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-accent shrink-0" />
+                    <span className="text-[9px] text-accent font-bold uppercase font-mono tracking-wider">CamFord Record</span>
+                  </div>
                 </div>
-                <p className="text-[11px] text-text-dark/80 font-semibold font-sans leading-tight">CAIE Learner Distinction Results</p>
-              </div>
 
-              {/* Stats Overlay Badge */}
-              <div className="absolute bottom-4 right-4 bg-primary text-white p-5 rounded-lg shadow-2xl max-w-[200px] border-b-4 border-accent z-10">
-                <p className="text-4xl font-serif font-bold text-accent mb-1">98%</p>
-                <p className="text-xs text-white/90 font-medium leading-normal">University placement success at Top-Tier Global & Local Schools.</p>
+                {/* CardSwap wrapper */}
+                <div className="relative flex-1 lg:flex lg:items-center lg:justify-center" style={{ height: '300px' }}>
+                  <CardSwap
+                    width={420}
+                    height={300}
+                    cardDistance={55}
+                    verticalDistance={65}
+                    delay={2000}
+                    pauseOnHover={true}
+                    skewAmount={5}
+                    easing="elastic"
+                  >
+                    <Card>
+                      <img src="/banner_swap_1.png" alt="Subjects Group Teaching" />
+                    </Card>
+                    <Card>
+                      <img src="/banner_swap_2.png" alt="Online Chapter" />
+                    </Card>
+                    <Card>
+                      <img src="/banner_swap_3.jpg" alt="AJ Banner" />
+                    </Card>
+                    <Card>
+                      <img src="/banner_swap_4.png" alt="Online Lecture" />
+                    </Card>
+                    <Card>
+                      <img src="/banner_swap_5.jpg" alt="AJ New Banner" />
+                    </Card>
+                  </CardSwap>
+
+                  {/* Outstanding Badge — desktop only */}
+                  <div className="absolute top-4 left-4 bg-white border-2 border-accent p-4 rounded-lg shadow-soft-hover max-w-[200px] hidden sm:block animate-pulse z-10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Award className="w-5 h-5 text-accent" />
+                      <span className="font-bold text-xs text-primary uppercase font-mono">Outstanding</span>
+                    </div>
+                    <p className="text-[11px] text-text-dark/80 font-semibold font-sans leading-tight">CAIE Learner Distinction Results</p>
+                  </div>
+
+                  {/* 98% Badge — desktop only */}
+                  <div className="absolute bottom-4 right-4 bg-primary text-white p-5 rounded-lg shadow-2xl max-w-[200px] border-b-4 border-accent z-10 hidden lg:block">
+                    <p className="text-4xl font-serif font-bold text-accent mb-1">98%</p>
+                    <p className="text-xs text-white/90 font-medium leading-normal">University placement success at Top-Tier Global &amp; Local Schools.</p>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -1062,7 +1107,7 @@ export default function App() {
             
             <TextCursor text="🎓" spacing={60} maxPoints={8}>
               <ScrollFloat
-                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif"
+                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif break-words"
                 scrollStart="top bottom-=10%"
                 scrollEnd="bottom center"
               >
@@ -1141,7 +1186,7 @@ export default function App() {
             
             <TextCursor text="🎓" spacing={60} maxPoints={8}>
               <ScrollFloat
-                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif"
+                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif break-words"
                 scrollStart="top bottom-=10%"
                 scrollEnd="bottom center"
               >
@@ -1257,7 +1302,7 @@ export default function App() {
                 </div>
                 
                 <TextCursor text="🎓" spacing={60} maxPoints={8}>
-                  <h2 className="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-white">
+                  <h2 className="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-white break-words">
                     Sir {headTeacher.name}
                   </h2>
                 </TextCursor>
@@ -1349,7 +1394,7 @@ export default function App() {
             </div>
             <TextCursor text="🎓" spacing={60} maxPoints={8}>
               <ScrollFloat
-                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif"
+                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif break-words"
                 scrollStart="top bottom-=10%"
                 scrollEnd="bottom center"
               >
@@ -1434,7 +1479,7 @@ export default function App() {
               </div>
               <TextCursor text="🎓" spacing={60} maxPoints={8}>
                 <ScrollFloat
-                  containerClassName="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-white"
+                  containerClassName="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-white break-words"
                   scrollStart="top bottom-=10%"
                   scrollEnd="bottom center"
                 >
@@ -1512,7 +1557,7 @@ export default function App() {
             </div>
             <TextCursor text="🎓" spacing={60} maxPoints={8}>
               <ScrollFloat
-                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif"
+                containerClassName="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif break-words"
                 scrollStart="top bottom-=10%"
                 scrollEnd="bottom center"
               >
@@ -1609,7 +1654,7 @@ export default function App() {
               </div>
               
               <TextCursor text="🎓" spacing={60} maxPoints={8}>
-                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-none">
+                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-none break-words">
                   Admission <br />
                   <span className="italic text-accent font-normal font-serif">Process</span>
                 </h2>
@@ -1824,7 +1869,7 @@ export default function App() {
               </div>
               
               <TextCursor text="🎓" spacing={60} maxPoints={8}>
-                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-none">
+                <h2 className="text-4xl sm:text-5xl font-bold text-primary tracking-tight font-serif leading-none break-words">
                   Contact <br />
                   <span className="italic text-accent font-normal font-serif">Coordinates</span>
                 </h2>
@@ -2544,13 +2589,16 @@ export default function App() {
 
                       {/* File Upload Input */}
                       <div className="space-y-1">
-                        <label className="block text-[10px] font-bold uppercase text-text-dark/60 tracking-wider">Select File (PDF / DOC)</label>
+                        <div className="flex items-center justify-between">
+                          <label className="block text-[10px] font-bold uppercase text-text-dark/60 tracking-wider">Select File (PDF / DOC)</label>
+                          <span className="text-[9px] text-text-dark/40 font-mono">Max 50 MB</span>
+                        </div>
                         <label className="flex items-center gap-3 w-full bg-white border-2 border-dashed border-primary/20 hover:border-accent px-3 py-3 rounded-sm cursor-pointer transition-colors group">
                           <svg className="w-5 h-5 text-primary/40 group-hover:text-accent shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
                           </svg>
                           <span className="text-[10px] text-text-dark/50 group-hover:text-primary transition-colors">
-                            {selectedFile ? selectedFile.name : 'Click to browse or drag file here'}
+                            {selectedFile ? `${selectedFile.name} (${(selectedFile.size / 1024 / 1024).toFixed(1)} MB)` : 'Click to browse or drag file here'}
                           </span>
                           <input
                             type="file"
@@ -2558,7 +2606,13 @@ export default function App() {
                             className="hidden"
                             onChange={(e) => {
                               const file = e.target.files?.[0] || null;
-                              setSelectedFile(file);
+                              if (file && file.size / 1024 / 1024 > 50) {
+                                alert(`File too large: ${(file.size / 1024 / 1024).toFixed(1)} MB\nMaximum allowed is 50 MB. Please compress it first.`);
+                                e.target.value = '';
+                                setSelectedFile(null);
+                              } else {
+                                setSelectedFile(file);
+                              }
                             }}
                           />
                         </label>

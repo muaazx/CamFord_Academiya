@@ -47,6 +47,13 @@ h1, h2, h3, h4, h5, h6, .font-serif-academy {
   font-family: var(--font-serif);
 }
 
+/* Prevent mid-word breaks in headings on all screen sizes */
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: none;
+}
+
 /* Custom rounded corner utility rules to ensure absolute compliance */
 .btn-academy {
   border-radius: 4px !important;
