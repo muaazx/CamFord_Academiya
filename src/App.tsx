@@ -2514,13 +2514,35 @@ export default function App() {
                     {inquiries.map((inq, idx) => (
                       <div key={inq.id || idx} className="p-4 rounded-md border border-primary/10 bg-primary/[0.01] text-xs space-y-2">
                         <div className="flex items-start justify-between gap-3">
-                          <div>
+                          <div className="min-w-0">
                             <p className="font-bold text-primary text-sm">{inq.fullName || inq.full_name}</p>
                             <p className="text-text-dark/60 font-mono text-[10px] mt-0.5">{inq.timestamp || inq.created_at || '—'}</p>
                           </div>
-                          <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0 ${(inq.level || '') === 'olevel' ? 'bg-blue-100 text-blue-700 border border-blue-200' : 'bg-purple-100 text-purple-700 border border-purple-200'}`}>
-                            {(inq.level || '') === 'olevel' ? 'O-Levels' : 'A-Levels'}
-                          </span>
+                          <div className="flex items-center gap-2 shrink-0">
+                            <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm ${(inq.level || '') === 'olevel' ? 'bg-blue-100 text-blue-700 border border-blue-200' : 'bg-purple-100 text-purple-700 border border-purple-200'}`}>
+                              {(inq.level || '') === 'olevel' ? 'O-Levels' : 'A-Levels'}
+                            </span>
+                            {/* Delete button */}
+                            <button
+                              onClick={async () => {
+                                if (!confirm(`Delete inquiry from "${inq.fullName || inq.full_name}"? This cannot be undone.`)) return;
+                                if (supabase && inq.id && typeof inq.id === 'string') {
+                                  const { error } = await supabase.from('inquiries').delete().eq('id', inq.id);
+                                  if (error) {
+                                    console.error('Delete inquiry error:', error);
+                                    alert('Failed to delete inquiry from database.');
+                                    return;
+                                  }
+                                }
+                                setInquiries(prev => prev.filter(i => i.id !== inq.id));
+                              }}
+                              className="text-red-500 hover:text-red-700 transition-colors cursor-pointer border-none bg-transparent p-0.5 rounded"
+                              title="Delete inquiry"
+                              aria-label="Delete inquiry"
+                            >
+                              <X className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
                         </div>
                         <div className="grid grid-cols-2 gap-2 text-[10px]">
                           <div><span className="text-text-dark/50 uppercase tracking-wider">Phone: </span><span className="font-semibold text-primary">{inq.phone}</span></div>

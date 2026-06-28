@@ -388,7 +388,7 @@ export interface HeadTeacher {
 }
 
 export const headTeacher: HeadTeacher = {
-  name: "Ahmad Jaan",
+  name: "Ahmed Jan",
   role: "Islamiyat / Islamic Studies Specialist",
   experience: "20+ Years",
   imageUrl: "/head_picc.png",

@@ -33,9 +33,19 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
 
   const splitText = useMemo(() => {
     const text = typeof children === 'string' ? children : '';
-    return text.split('').map((char, index) => (
-      <span className="char" key={index}>
-        {char === ' ' ? '\u00A0' : char}
+    const words = text.split(' ');
+    return words.map((word, wordIndex) => (
+      <span key={wordIndex} className="word" style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+        {word.split('').map((char, charIndex) => (
+          <span className="char" key={charIndex}>
+            {char}
+          </span>
+        ))}
+        {wordIndex < words.length - 1 && (
+          <span className="char" style={{ display: 'inline-block' }}>
+            &nbsp;
+          </span>
+        )}
       </span>
     ));
   }, [children]);

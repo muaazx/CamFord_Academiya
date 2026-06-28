@@ -48,9 +48,9 @@ h1, h2, h3, h4, h5, h6, .font-serif-academy {
 }
 
 /* Prevent mid-word breaks in headings on all screen sizes */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
-  word-break: break-word;
+  word-break: normal;
   hyphens: none;
 }
 
