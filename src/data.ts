@@ -275,14 +275,14 @@ export const facultyMembers: FacultyMember[] = [
   {
     id: 'f7',
     name: 'Miss Salaha Akhtar',
-    subject: 'Urdu Language Specialist',
-    qualification: 'Senior Urdu Language Specialist',
+    subject: 'Islamiyat Specialist',
+    qualification: 'Senior Islamiyat Subject Specialist',
     experience: '16+ Years',
     imageUrl: '/miss_salaha_akhtar.png',
-    bio: 'Over 16 years of teaching experience in Urdu across renowned educational institutions. Highly experienced in delivering concept-based learning, language proficiency, and exam-focused preparation for international curricula. Dedicated to helping students develop strong reading, writing, comprehension, and analytical skills while achieving outstanding academic results.',
-    achievement: 'Helped students achieve top grades through concept-based learning and language proficiency.',
+    bio: 'Over 16 years of teaching experience in Islamiyat across renowned educational institutions. Highly experienced in delivering concept-based learning, values integration, and exam-focused preparation for international curricula. Dedicated to helping students develop strong analytical, descriptive, and critical thinking skills while achieving outstanding academic results.',
+    achievement: 'Helped students achieve top grades through concept-based learning and deep understanding of Islamic teachings.',
     schools: ['DHA Education System', 'Pak-Turk Maarif International Schools & Colleges'],
-    subjectsTaught: ['Urdu'],
+    subjectsTaught: ['Islamiyat'],
     curricula: ['Cambridge O Level']
   },
   {
@@ -432,6 +432,18 @@ export const facultyMembers: FacultyMember[] = [
     achievement: 'Specializes in developing students\' reading, writing, literary analysis, and exam techniques to achieve excellent academic results.',
     schools: ['Sharif Education Complex', 'Green Hall Academy', 'DHA Education System', 'Army Public Schools for International Studies'],
     subjectsTaught: ['English Language', 'English Literature'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f20',
+    name: 'Mr. Naveed Ahmad',
+    subject: 'Physics Specialist',
+    qualification: 'Senior Physics Specialist',
+    experience: 'Experienced',
+    imageUrl: '/mr_naveed_ahmad.jpg',
+    bio: 'Physics Teacher for O-Level and A-Level students. A dedicated and experienced educator specializing in the Cambridge curriculum, with expertise in Mechanics, Electricity, Waves, Thermal Physics, and Modern Physics. Focused on building strong conceptual understanding, practical problem-solving skills, and effective exam techniques to help students achieve outstanding results.',
+    achievement: 'Focused on building strong conceptual understanding, practical problem-solving skills, and exam techniques.',
+    subjectsTaught: ['Physics'],
     curricula: ['Cambridge O Level', 'Cambridge A Level']
   }
 ];
@@ -583,7 +595,7 @@ export interface HeadTeacher {
 
 export const headTeacher: HeadTeacher = {
   name: "Ahmed Jan",
-  role: "Islamiyat / Islamic Studies Specialist",
+  role: "Islamiyat 0493/2058/9488",
   experience: "20+ Years",
   imageUrl: "/head_picc.png",
   bio: "Over 20 years of teaching and examination experience, helping students achieve outstanding academic results through expert guidance and exam-focused preparation.",

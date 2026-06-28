@@ -1415,37 +1415,42 @@ export default function App() {
           <div className="space-y-16">
             {[
               {
-                title: "🧪 Science Subjects",
+                title: "🧪 Faculty of Science",
                 subtitle: "Physics (CAIE 5054) • Chemistry (CAIE 5070) • Biology (CAIE 5090)",
-                teacherIds: ['f2', 'f4']
+                teacherIds: ['f2', 'f4', 'f20']
               },
               {
-                title: "💻 Computing & Technology",
+                title: "💻 Faculty of Computing and Technology",
                 subtitle: "Computer Science (CAIE 2210)",
                 teacherIds: ['f3', 'f17']
               },
               {
-                title: "➗ Mathematics",
+                title: "➗ Faculty of Mathematics",
                 subtitle: "Mathematics (D) (CAIE 4024)",
                 teacherIds: ['f1', 'f2', 'f8']
               },
               {
-                title: "📚 Languages",
+                title: "📚 Faculty of Languages",
                 subtitle: "English Language (CAIE 1123) • Urdu A & B",
-                teacherIds: ['f11', 'f19', 'f7', 'f18']
+                teacherIds: ['f11', 'f19', 'f18']
               },
               {
-                title: "💼 Commerce & Business",
+                title: "💼 Faculty of Commerce & Business",
                 subtitle: "Economics (CAIE 9708) • Business Studies (CAIE 9609) • Accounting (CAIE 9706)",
                 teacherIds: ['f8', 'f9', 'f10']
               },
               {
-                title: "🌍 Humanities & Social Sciences",
-                subtitle: "Pakistan Studies (CAIE 2059) • Islamiyat (CAIE 2058) • Qur'an & Islamic Studies",
-                teacherIds: ['f5', 'f6', 'f12', 'f13', 'f15', 'f16']
+                title: "🌍 Faculty of Humanities & Social Sciences",
+                subtitle: "Pakistan Studies (CAIE 2059) • Islamiyat (CAIE 2058)",
+                teacherIds: ['f5', 'f6', 'f7', 'f15', 'f16']
               },
               {
-                title: "📋 Administration & Support",
+                title: "📖 Quran Scholars",
+                subtitle: "Qur'an Recitation, Tajweed, Translation & Tafseer",
+                teacherIds: ['f12', 'f13']
+              },
+              {
+                title: "📋 Faculty of Administration & Support",
                 subtitle: "Management & Coordination",
                 teacherIds: ['f14']
               }
