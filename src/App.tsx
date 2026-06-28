@@ -2051,9 +2051,8 @@ export default function App() {
             </p>
             
             <div className="flex gap-6 text-[10px] uppercase font-bold tracking-wider text-accent font-mono">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.instagram.com/camfordacademy.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Instagram</a>
+              <a href="https://www.linkedin.com/in/ahmad-jaan-8305a7384/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
             </div>
           </div>
 
