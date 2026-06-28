@@ -642,16 +642,16 @@ export default function App() {
       
       {/* 1. STICKY NAVBAR */}
       <header id="navbar" className="fixed top-0 left-0 w-full z-50 bg-primary/95 backdrop-blur-md border-b-4 border-accent shadow-soft-layered">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Logo / Academy Crest */}
-          <a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-white flex items-center justify-center rounded-md shadow-md transition-transform duration-300 group-hover:scale-105 overflow-hidden" id="logo-crest">
+          <a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className="flex items-center gap-2 sm:gap-3 group min-w-0">
+            <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white flex items-center justify-center rounded-md shadow-md transition-transform duration-300 group-hover:scale-105 overflow-hidden shrink-0" id="logo-crest">
               <img src="/academy_logo.png" alt="CamFord Academiya Logo" className="w-full h-full object-contain p-1" />
             </div>
-            <div>
-              <span className="block text-white font-bold tracking-wider text-xl uppercase font-serif">CamFord Academiya</span>
-              <span className="block text-accent text-[10px] tracking-widest uppercase font-semibold">O/A Levels Elite</span>
+            <div className="min-w-0">
+              <span className="block text-white font-bold tracking-wider text-sm sm:text-xl uppercase font-serif leading-tight">CamFord Academiya</span>
+              <span className="hidden sm:block text-accent text-[10px] tracking-widest uppercase font-semibold">O/A Levels Elite</span>
             </div>
           </a>
 
@@ -875,12 +875,12 @@ export default function App() {
                   </button>
                 </>
               ) : (
-                <button 
-                  onClick={() => { setShowLoginModal(true); setMobileMenuOpen(false); setAuthError(''); setAuthSuccess(''); }} 
-                  className="btn-academy border-2 border-white/30 hover:border-accent hover:text-accent text-white py-2.5 text-center text-xs uppercase tracking-wider font-bold"
-                >
-                  Portal Login
-                </button>
+                  <button 
+                    onClick={() => { setShowLoginModal(true); setMobileMenuOpen(false); setAuthError(''); setAuthSuccess(''); }} 
+                    className="btn-academy border-2 border-white/30 hover:border-accent hover:text-accent text-white py-2.5 text-center text-xs uppercase tracking-wider font-bold"
+                  >
+                    Portal Login
+                  </button>
               )}
               
               <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="btn-academy bg-accent hover:bg-accent/90 text-primary px-5 py-3 text-center text-sm uppercase tracking-wider font-bold shadow-md mt-2 transition-all">Enroll Now</a>
@@ -890,57 +890,57 @@ export default function App() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section id="hero" className="relative min-h-screen pt-20 flex items-center bg-cover bg-center overflow-hidden" style={{ backgroundImage: `linear-gradient(rgba(11, 28, 63, 0.9), rgba(11, 28, 63, 0.96)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80')` }}>
+      <section id="hero" className="relative min-h-screen pt-16 sm:pt-20 flex items-center bg-cover bg-center overflow-hidden" style={{ backgroundImage: `linear-gradient(rgba(11, 28, 63, 0.9), rgba(11, 28, 63, 0.96)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80')` }}>
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10 flex flex-col justify-between min-h-[85vh]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 w-full relative z-10 flex flex-col justify-between min-h-[85vh]">
           
           {/* Main Content Area */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
-            <div className="lg:col-span-8 text-left space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center my-auto">
+            <div className="lg:col-span-8 text-left space-y-4 sm:space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full border border-white/20">
-                <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-accent font-mono">Cambridge Professional Partner</span>
+                <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-accent animate-pulse"></span>
+                <span className="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-accent font-mono">Cambridge Professional Partner</span>
               </div>
               
               {/* Bold Typography Title */}
               <TextCursor text="🎓" spacing={60} maxPoints={8}>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05] font-serif">
+                <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05] font-serif">
                   The Standard of <br />
-                  <span className="italic text-accent font-normal font-serif text-5xl sm:text-6xl lg:text-7xl">Academic Merit</span>
+                  <span className="italic text-accent font-normal font-serif text-3xl sm:text-5xl lg:text-7xl">Academic Merit</span>
                 </h1>
               </TextCursor>
               
-              <p className="text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed font-light">
-                Lahore's elite destination for O & A Level coaching. We combine traditional discipline with cutting-edge exam diagnostics to deliver stellar CAIE performance year after year.
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 max-w-2xl leading-relaxed font-light">
+                Lahore's elite destination for O &amp; A Level coaching. We combine traditional discipline with cutting-edge exam diagnostics to deliver stellar CAIE performance year after year.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="#programs" onClick={(e) => handleSmoothScroll(e, 'programs')} className="btn-academy bg-accent hover:bg-accent/90 text-primary text-center px-8 py-3.5 text-xs uppercase tracking-wider font-bold shadow-lg">View Programs</a>
-                <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="btn-academy border-2 border-white hover:bg-white hover:text-primary text-white text-center px-8 py-3.5 text-xs uppercase tracking-wider font-bold transition-all">Enroll Now</a>
+              <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
+                <a href="#programs" onClick={(e) => handleSmoothScroll(e, 'programs')} className="btn-academy bg-accent hover:bg-accent/90 text-primary text-center px-6 sm:px-8 py-3 sm:py-3.5 text-xs uppercase tracking-wider font-bold shadow-lg">View Programs</a>
+                <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="btn-academy border-2 border-white hover:bg-white hover:text-primary text-white text-center px-6 sm:px-8 py-3 sm:py-3.5 text-xs uppercase tracking-wider font-bold transition-all">Enroll Now</a>
               </div>
             </div>
           </div>
 
           {/* Stat Counters Row */}
-          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/10 mt-16 bg-primary/40 backdrop-blur-sm p-6 rounded-lg shadow-2xl">
-            <div className="text-center md:text-left border-l-4 border-accent pl-4">
-              <p className="text-4xl sm:text-5xl font-bold text-accent font-serif tracking-tight">{studentsCount}+</p>
-              <p className="text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">Active Students</p>
+          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 pt-8 sm:pt-12 border-t border-white/10 mt-8 sm:mt-16 bg-primary/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg shadow-2xl">
+            <div className="text-center md:text-left border-l-4 border-accent pl-3 sm:pl-4">
+              <p className="text-2xl sm:text-4xl lg:text-5xl font-bold text-accent font-serif tracking-tight">{studentsCount}+</p>
+              <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">Active Students</p>
             </div>
-            <div className="text-center md:text-left border-l-4 border-accent pl-4">
-              <p className="text-4xl sm:text-5xl font-bold text-accent font-serif tracking-tight">{rateCount}%</p>
-              <p className="text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">A*/A CAIE Rate</p>
+            <div className="text-center md:text-left border-l-4 border-accent pl-3 sm:pl-4">
+              <p className="text-2xl sm:text-4xl lg:text-5xl font-bold text-accent font-serif tracking-tight">{rateCount}%</p>
+              <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">A*/A CAIE Rate</p>
             </div>
-            <div className="text-center md:text-left border-l-4 border-accent pl-4">
-              <p className="text-4xl sm:text-5xl font-bold text-accent font-serif tracking-tight">{yearsCount}Y</p>
-              <p className="text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">Excellence</p>
+            <div className="text-center md:text-left border-l-4 border-accent pl-3 sm:pl-4">
+              <p className="text-2xl sm:text-4xl lg:text-5xl font-bold text-accent font-serif tracking-tight">{yearsCount}Y</p>
+              <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">Excellence</p>
             </div>
-            <div className="text-center md:text-left border-l-4 border-accent pl-4">
-              <p className="text-4xl sm:text-5xl font-bold text-accent font-serif tracking-tight">{awardsCount}+</p>
-              <p className="text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">CAIE Merit Awards</p>
+            <div className="text-center md:text-left border-l-4 border-accent pl-3 sm:pl-4">
+              <p className="text-2xl sm:text-4xl lg:text-5xl font-bold text-accent font-serif tracking-tight">{awardsCount}+</p>
+              <p className="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/70 font-bold mt-1 font-mono">CAIE Merit Awards</p>
             </div>
           </div>
 
@@ -998,7 +998,7 @@ export default function App() {
             </div>
 
             {/* Right – Animated Card Stack */}
-            <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex items-center justify-center" style={{ height: '520px' }}>
+            <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex items-center justify-center" style={{ height: '300px' }} data-mobile-card-swap>
               <CardSwap
                 width={420}
                 height={300}
@@ -1157,13 +1157,13 @@ export default function App() {
             <div className="inline-flex bg-white p-1 rounded-sm border border-primary/10 shadow-sm mt-6">
               <button 
                 onClick={() => setActiveTab('olevel')}
-                className={`px-6 py-2.5 text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'olevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
+                className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'olevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
               >
                 O Level Program
               </button>
               <button 
                 onClick={() => setActiveTab('alevel')}
-                className={`px-6 py-2.5 text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'alevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
+                className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'alevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
               >
                 A Level Program
               </button>
@@ -1906,7 +1906,7 @@ export default function App() {
             </div>
 
             {/* Right Map Embed Column */}
-            <div className="lg:col-span-7 h-[450px] sm:h-auto min-h-[400px]">
+            <div className="lg:col-span-7 h-56 sm:h-[350px] lg:h-[450px]">
               <div className="w-full h-full rounded-lg overflow-hidden border border-primary/10 shadow-2xl relative bg-bg-light">
                 {/* Embed an actual, working Google Map or clean placeholder with correct location */}
                 <iframe 
@@ -2017,8 +2017,8 @@ export default function App() {
 
       {/* 12. FACULTY DETAILS MODAL */}
       {selectedFaculty && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/80 backdrop-blur-md animate-fade-in transition-all duration-300" onClick={() => setSelectedFaculty(null)}>
-          <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-hidden max-h-[90vh] flex flex-col md:flex-row animate-scale-up" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-primary/80 backdrop-blur-md animate-fade-in transition-all duration-300" onClick={() => setSelectedFaculty(null)}>
+          <div className="relative w-full max-w-3xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-hidden max-h-[95vh] flex flex-col md:flex-row animate-scale-up" onClick={(e) => e.stopPropagation()}>
             {/* Close Button */}
             <button 
               onClick={(e) => { e.stopPropagation(); setSelectedFaculty(null); }}
@@ -2029,7 +2029,7 @@ export default function App() {
             </button>
 
             {/* Left side: Photo & Main Info */}
-            <div className="w-full md:w-2/5 bg-primary/5 p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-primary/10">
+            <div className="w-full md:w-2/5 bg-primary/5 p-4 sm:p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-primary/10">
               <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-accent shadow-lg mb-4 shrink-0">
                 <img src={selectedFaculty.imageUrl} alt={selectedFaculty.name} className="w-full h-full object-cover" />
               </div>
@@ -2042,7 +2042,7 @@ export default function App() {
             </div>
 
             {/* Right side: Detailed Information (Scrollable if needed) */}
-            <div className="w-full md:w-3/5 p-8 overflow-y-auto space-y-6 max-h-[50vh] md:max-h-[90vh] text-left">
+            <div className="w-full md:w-3/5 p-4 sm:p-8 overflow-y-auto space-y-4 sm:space-y-6 max-h-[45vh] md:max-h-[90vh] text-left">
               {/* Professional Profile */}
               <div className="space-y-2">
                 <h4 className="text-xs font-bold uppercase tracking-widest text-accent font-mono">Professional Profile</h4>
@@ -2145,8 +2145,8 @@ export default function App() {
 
       {/* 13. AUTHENTICATION MODAL */}
       {showLoginModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowLoginModal(false)}>
-          <div className="relative w-full max-w-4xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-hidden max-h-[95vh] flex flex-col md:flex-row animate-scale-up" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowLoginModal(false)}>
+          <div className="relative w-full max-w-4xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-y-auto max-h-[95vh] flex flex-col md:flex-row animate-scale-up" onClick={(e) => e.stopPropagation()}>
             
             {/* Close button */}
             <button 
@@ -2193,7 +2193,7 @@ export default function App() {
             </div>
 
             {/* Right side: Forms */}
-            <div className="w-full md:w-3/5 p-8 sm:p-10 flex flex-col justify-center text-left">
+            <div className="w-full md:w-3/5 p-5 sm:p-8 md:p-10 flex flex-col justify-center text-left">
               {/* Tab Selector */}
               <div className="flex border-b border-primary/5 mb-6">
                 <button 
@@ -2329,32 +2329,32 @@ export default function App() {
 
       {/* 14. STUDENT PORTAL DASHBOARD MODAL */}
       {showStudentPortal && user && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowStudentPortal(false)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowStudentPortal(false)}>
           <div className="relative w-full max-w-4xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-hidden max-h-[95vh] flex flex-col animate-scale-up" onClick={(e) => e.stopPropagation()}>
             
             {/* Close button */}
             <button 
               onClick={() => setShowStudentPortal(false)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:text-accent transition-all cursor-pointer border-none"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:text-accent transition-all cursor-pointer border-none"
               aria-label="Close Portal"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-8 overflow-y-auto space-y-8 text-left">
+            <div className="p-4 sm:p-8 overflow-y-auto space-y-6 sm:space-y-8 text-left">
               {/* Header block */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-primary/5 pb-6 gap-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-primary/5 pb-4 sm:pb-6 gap-3 sm:gap-4">
                 <div className="flex items-center gap-3">
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt="" className="w-16 h-16 rounded-full border-4 border-accent object-cover" />
+                    <img src={user.photoURL} alt="" className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-accent object-cover shrink-0" />
                   ) : (
-                    <div className="w-16 h-16 rounded-full bg-accent/20 border-4 border-accent text-accent flex items-center justify-center font-bold text-2xl uppercase font-mono">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent/20 border-4 border-accent text-accent flex items-center justify-center font-bold text-xl sm:text-2xl uppercase font-mono shrink-0">
                       {user.displayName ? user.displayName.charAt(0) : 'S'}
                     </div>
                   )}
-                  <div>
-                    <h3 className="text-2xl font-bold font-serif text-primary">{user.displayName}</h3>
-                    <p className="text-xs text-text-dark/60 font-light mt-0.5">Student Account &bull; {user.email}</p>
+                  <div className="min-w-0">
+                    <h3 className="text-lg sm:text-2xl font-bold font-serif text-primary truncate">{user.displayName}</h3>
+                    <p className="text-[10px] sm:text-xs text-text-dark/60 font-light mt-0.5 truncate">Student Account &bull; {user.email}</p>
                   </div>
                 </div>
                 
@@ -2431,24 +2431,24 @@ export default function App() {
 
       {/* 15. ADMIN PORTAL CONTROL PANEL MODAL */}
       {showAdminPortal && user && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowAdminPortal(false)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-primary/80 backdrop-blur-md animate-fade-in" onClick={() => setShowAdminPortal(false)}>
           <div className="relative w-full max-w-5xl bg-white rounded-lg shadow-2xl border-t-4 border-accent overflow-hidden max-h-[95vh] flex flex-col animate-scale-up" onClick={(e) => e.stopPropagation()}>
             
             {/* Close button */}
             <button 
               onClick={() => setShowAdminPortal(false)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:text-accent transition-all cursor-pointer border-none"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 text-primary hover:text-accent transition-all cursor-pointer border-none"
               aria-label="Close Admin Portal"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="p-8 overflow-y-auto space-y-8 text-left">
+            <div className="p-4 sm:p-8 overflow-y-auto space-y-6 sm:space-y-8 text-left">
               {/* Header */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-primary/5 pb-6 gap-4">
-                <div>
-                  <h3 className="text-2xl font-bold font-serif text-primary">Academic Administration Portal</h3>
-                  <p className="text-xs text-text-dark/60 font-light mt-0.5 font-sans">Logged in as Administrator &bull; {user.email}</p>
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-primary/5 pb-4 sm:pb-6 gap-3 sm:gap-4">
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-2xl font-bold font-serif text-primary">Academic Administration Portal</h3>
+                  <p className="text-[10px] sm:text-xs text-text-dark/60 font-light mt-0.5 font-sans truncate">Logged in as Administrator &bull; {user.email}</p>
                 </div>
                 
                 <span className="bg-red-500/10 text-red-700 border border-red-500/20 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm font-mono shrink-0">
@@ -2712,18 +2712,18 @@ export default function App() {
         href="https://wa.me/923208422445?text=Hello%20CamFord%20Academiya%2C%20I%20have%20an%20admissions%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-5 py-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 group border border-white/20 active:scale-95 cursor-pointer font-bold font-sans tracking-wide text-xs uppercase"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 sm:gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-3 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 group border border-white/20 active:scale-95 cursor-pointer font-bold font-sans tracking-wide text-xs uppercase"
         style={{
           boxShadow: '0 10px 30px -5px rgba(37, 211, 102, 0.45)'
         }}
       >
         <svg 
-          className="w-5 h-5 fill-current transform group-hover:rotate-12 transition-transform duration-300" 
+          className="w-5 h-5 fill-current transform group-hover:rotate-12 transition-transform duration-300 shrink-0" 
           viewBox="0 0 24 24"
         >
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.714-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.379 1.968 13.914 1.94 12.012 1.94 6.58 1.94 2.16 6.31 2.156 11.737c-.001 1.691.464 3.342 1.343 4.8l-.996 3.635 3.734-.977-.19.112zM17.156 14.28c-.282-.143-1.67-.82-1.928-.915-.258-.095-.447-.143-.635.143-.188.286-.727.915-.89 1.101-.162.186-.326.208-.608.066-.282-.143-1.192-.437-2.27-1.402-.838-.747-1.405-1.67-1.569-1.955-.163-.285-.018-.44.124-.581.127-.127.282-.328.423-.492.141-.164.188-.285.282-.476.095-.19.047-.358-.023-.5-.071-.143-.635-1.527-.869-2.09-.228-.547-.479-.472-.656-.481-.17-.008-.366-.01-.562-.01-.197 0-.517.073-.787.368-.27.296-1.032 1.01-1.032 2.463s1.056 2.85 1.203 3.047c.146.196 2.077 3.172 5.032 4.45.703.304 1.252.486 1.681.622.707.225 1.35.193 1.859.117.567-.085 1.67-.682 1.905-1.34.235-.658.235-1.223.164-1.34-.07-.117-.263-.188-.546-.33z"/>
         </svg>
-        <span className="font-bold tracking-wider">Instant Live Chat</span>
+        <span className="hidden xs:inline font-bold tracking-wider">Instant Live Chat</span>
       </a>
 
       </div>

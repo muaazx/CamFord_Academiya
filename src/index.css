@@ -12,6 +12,9 @@
   
   --shadow-soft-layered: 0 4px 6px -1px rgba(11, 28, 63, 0.05), 0 2px 4px -1px rgba(11, 28, 63, 0.03), 0 10px 15px -3px rgba(11, 28, 63, 0.05);
   --shadow-soft-hover: 0 10px 20px -5px rgba(11, 28, 63, 0.1), 0 8px 16px -6px rgba(11, 28, 63, 0.05);
+
+  /* Extra-small breakpoint for very small phones */
+  --breakpoint-xs: 475px;
 }
 
 /* Base custom styles to enforce design system rules */
@@ -20,6 +23,24 @@ body {
   color: var(--color-text-dark);
   background-color: var(--color-bg-light);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Better touch tap handling on mobile */
+button, a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure inputs don't zoom on iOS */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .font-serif-academy {
