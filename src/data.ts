@@ -372,6 +372,38 @@ export const testimonialsList: Testimonial[] = [
     level: "O Levels (Distinction Winner)",
     rating: 5,
     role: 'Student'
+  },
+  {
+    id: 't5',
+    quote: "The Chemistry practical sessions and comprehensive mock exams prepared me perfectly for my CAIEs. Sir Bilal's notes are incredibly precise and summarize everything we need to know. I scored straight A*s across all my sciences!",
+    name: "Amina Yusuf",
+    level: "O Levels (8 A*s)",
+    rating: 5,
+    role: 'Student'
+  },
+  {
+    id: 't6',
+    quote: "CamFord Academiya was a game changer for my daughter's A-Level grades. The personalized attention, individual feedback sessions, and constant communication from the administration kept us well-informed. She secured her path to LUMS!",
+    name: "Mrs. Naila Kamran",
+    level: "Parent of Sarah Kamran (A-Levels)",
+    rating: 5,
+    role: 'Parent'
+  },
+  {
+    id: 't7',
+    quote: "I was struggling with macroeconomics until I joined the revision sessions at CamFord. The mock exams and diagnostic tools pinpointed exactly where I was losing marks. Going from a C in school prep to an A in the CAIEs was unbelievable!",
+    name: "Mustafa Sheikh",
+    level: "A Levels Grad (3 As)",
+    rating: 5,
+    role: 'Student'
+  },
+  {
+    id: 't8',
+    quote: "The professional guidance and structured learning plan at CamFord are unparalleled. My daughter felt completely supported, not just academically but also during her university applications. I highly recommend them for Lahore's top candidates.",
+    name: "Brig. (R) Tariq Mahmood",
+    level: "Parent of Noor Tariq (A-Levels)",
+    rating: 5,
+    role: 'Parent'
   }
 ];
 
