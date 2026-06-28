@@ -160,7 +160,7 @@ export default function App() {
         .from('notes')
         .select('*')
         .order('created_at', { ascending: false });
-      if (!error && data && data.length > 0) setNotesList(data);
+      if (!error && data) setNotesList(data);
     };
 
     // Fetch inquiries from Supabase
@@ -169,7 +169,7 @@ export default function App() {
         .from('inquiries')
         .select('*')
         .order('timestamp', { ascending: false });
-      if (!error && data && data.length > 0) setInquiries(data);
+      if (!error && data) setInquiries(data);
     };
 
     fetchNotes();
