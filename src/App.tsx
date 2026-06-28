@@ -1303,7 +1303,7 @@ export default function App() {
                 
                 <TextCursor text="🎓" spacing={60} maxPoints={8}>
                   <h2 className="text-4xl sm:text-5xl font-bold tracking-tight font-serif text-white break-words">
-                    Sir {headTeacher.name}
+                    Mr. {headTeacher.name}
                   </h2>
                 </TextCursor>
                 

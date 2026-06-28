@@ -199,7 +199,7 @@ export const aLevelSubjects: Subject[] = [
 export const facultyMembers: FacultyMember[] = [
   {
     id: 'f1',
-    name: 'Sir Amjad Raza',
+    name: 'Mr. Amjad Raza',
     subject: 'Mathematics Specialist',
     qualification: 'Senior Mathematics Subject Lead',
     experience: '15+ Years',
@@ -212,11 +212,11 @@ export const facultyMembers: FacultyMember[] = [
   },
   {
     id: 'f2',
-    name: 'Sir Amar Zulkifl',
+    name: 'Mr. Amar Zulkifl',
     subject: 'Mathematics & Physics Specialist',
     qualification: 'Senior O/A Levels Subject Specialist',
     experience: '12+ Years',
-    imageUrl: '/sir_ammar.jpg',
+    imageUrl: '/mr_ammar.jpg',
     bio: 'Dedicated educator specializing in Mathematics and Physics for O Level and A Level students. Focused on building strong conceptual understanding, analytical thinking, and exam-oriented preparation to help students achieve outstanding academic results.',
     achievement: 'Helped hundreds of students secure straight A*s in Math & Physics.',
     subjectsTaught: ['O Level Mathematics', 'A Level Mathematics', 'O Level Physics', 'A Level Physics'],
@@ -236,11 +236,11 @@ export const facultyMembers: FacultyMember[] = [
   },
   {
     id: 'f4',
-    name: 'Sir Imran Ahmad',
+    name: 'Mr. Imran Ahmad',
     subject: 'Chemistry & Biology Specialist',
     qualification: 'Senior Sciences Subject Specialist',
     experience: '12+ Years',
-    imageUrl: '/sir_imran.png',
+    imageUrl: '/mr_imran.png',
     bio: 'Experienced educator specializing in Chemistry and Biology across leading international curricula. Dedicated to building strong conceptual understanding through practical applications, critical thinking, and exam-focused preparation. Committed to helping students achieve academic excellence with personalized guidance and proven teaching strategies.',
     achievement: 'Expert prep lead for Cambridge CAIE and Advanced Placement (AP) Exams.',
     subjectsTaught: ['Chemistry', 'Biology'],
@@ -261,7 +261,7 @@ export const facultyMembers: FacultyMember[] = [
   },
   {
     id: 'f6',
-    name: 'Sir Adnan Ashraf',
+    name: 'Mr. Adnan Ashraf',
     subject: 'Pakistan Studies Specialist',
     qualification: 'Senior Pakistan Studies Subject Specialist',
     experience: '25+ Years',
@@ -271,6 +271,130 @@ export const facultyMembers: FacultyMember[] = [
     schools: ['Beaconhouse School System', 'The City School', 'Roots International Schools & Colleges', 'DHA Education System (DHAES)', 'LACAS'],
     subjectsTaught: ['Pakistan Studies'],
     curricula: ['Cambridge O Level']
+  },
+  {
+    id: 'f7',
+    name: 'Miss Salaha Akhtar',
+    subject: 'Urdu Language Specialist',
+    qualification: 'Senior Urdu Language Specialist',
+    experience: '16+ Years',
+    imageUrl: '/miss_salaha_akhtar.png',
+    bio: 'Over 16 years of teaching experience in Urdu across renowned educational institutions. Highly experienced in delivering concept-based learning, language proficiency, and exam-focused preparation for international curricula. Dedicated to helping students develop strong reading, writing, comprehension, and analytical skills while achieving outstanding academic results.',
+    achievement: 'Helped students achieve top grades through concept-based learning and language proficiency.',
+    schools: ['DHA Education System', 'Pak-Turk Maarif International Schools & Colleges'],
+    subjectsTaught: ['Urdu'],
+    curricula: ['Cambridge O Level']
+  },
+  {
+    id: 'f8',
+    name: 'Mr. Sajid Farooq',
+    subject: 'Economics, Business Studies & Mathematics Specialist',
+    qualification: 'Senior Commerce & Mathematics Specialist',
+    experience: '10+ Years',
+    imageUrl: '/mr_sajid_farooq.png',
+    bio: 'Experienced educator specializing in Economics, Business Studies, and O Level Mathematics. Dedicated to building strong conceptual understanding, analytical thinking, and problem-solving skills through student-centered and exam-focused teaching. Committed to helping students excel in international curricula with personalized guidance and proven examination strategies.',
+    achievement: 'Committed to building strong conceptual understanding and exam-focused problem-solving skills.',
+    subjectsTaught: ['Economics', 'Business Studies', 'Mathematics (O Level)'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f9',
+    name: 'Mr. Burhan Ali',
+    subject: 'Accounting & Economics Specialist',
+    qualification: 'Senior Accounting & Economics Instructor',
+    experience: '10+ Years',
+    imageUrl: '/mr_burhan_ali.png',
+    bio: 'Experienced educator specializing in Accounting and Economics for O Level and A Level students. Skilled in delivering concept-based learning, developing analytical and problem-solving abilities, and providing exam-focused preparation. Dedicated to helping students achieve academic excellence through personalized guidance and effective teaching strategies.',
+    achievement: 'Expert in developing analytical and problem-solving abilities in Accounting and Economics.',
+    schools: ['The City School', 'Beaconhouse School System'],
+    subjectsTaught: ['Accounting', 'Economics'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f10',
+    name: 'Mr. Kamran Alam Butt',
+    subject: 'Accounting, Economics & Business Studies Specialist',
+    qualification: 'Senior Commerce Subject Lead',
+    experience: '6+ Years',
+    imageUrl: '/mr_kamran_alam_butt.png',
+    bio: 'Experienced educator specializing in Accounting, Economics, and Business Studies for O Level and A Level students. Skilled in delivering concept-based instruction, fostering analytical thinking, and providing comprehensive exam-focused preparation. Dedicated to helping students achieve outstanding academic performance through personalized guidance, practical insights, and proven teaching methodologies.',
+    achievement: 'Delivers concept-based commerce instruction and comprehensive exam-focused preparation.',
+    schools: ['Beaconhouse School System', 'The City School'],
+    subjectsTaught: ['Accounting', 'Economics', 'Business Studies'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f11',
+    name: 'Mr. Ramzan Qadir',
+    subject: 'English Language & Literature Specialist',
+    qualification: 'Senior English Language & Literature Subject Specialist',
+    experience: '20+ Years',
+    imageUrl: '/mr_ramzan_qadir.png',
+    bio: 'Experienced educator specializing in English Language and English Literature for O Level and A Level students. Expert in developing students\' reading, writing, critical analysis, and communication skills through engaging, concept-based instruction. Dedicated to providing exam-focused preparation and personalized guidance, helping students achieve outstanding academic results in international curricula.',
+    achievement: 'Dedicated A-level English Language examiner with 20+ years of teaching expertise.',
+    schools: ['Beaconhouse School System', 'LACAS', 'Crescent Model Higher Secondary School', 'International School, Kingdom of Saudi Arabia (KSA)'],
+    subjectsTaught: ['English Language', 'English Literature'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f12',
+    name: 'Qari Hafiz Muhammad Shafeeque',
+    subject: "Qur'an & Islamic Studies Instructor",
+    qualification: "Lead Qur'an & Tajweed Instructor",
+    experience: '10+ Years',
+    imageUrl: '/qari_m_shahfique.jpg.jpeg',
+    bio: 'Dedicated Qur\'an teacher with expertise in Tajweed, Qur\'an Translation, and Tafseer. Committed to helping students develop accurate Qur\'anic recitation, a strong understanding of the meanings of the Holy Qur\'an, and a deeper appreciation of its teachings. Employs a student-centered teaching approach, ensuring learners of all ages build confidence, fluency, and a lifelong connection with the Qur\'an.',
+    achievement: 'Dedicated Qur\'an teacher specializing in Tajweed, Translation, and Tafseer.',
+    subjectsTaught: ["Qur'an Recitation (Nazra)", 'Tajweed', 'Translation of the Holy Qur\'an', 'Tafseer', 'Islamic Studies'],
+    expertise: ["Qur'an with Tajweed", 'Qur\'an Translation', 'Tafseer (Exegesis of the Qur\'an)']
+  },
+  {
+    id: 'f13',
+    name: 'Qari Hafiz Mufti Muhammad Abdullah',
+    subject: 'Qur\'an, Tajweed & Islamic Studies Instructor',
+    qualification: 'Lead Qur\'an, Tajweed & Tafseer Instructor',
+    experience: '12+ Years',
+    imageUrl: '/mr_mufti_abdullah.png',
+    bio: 'Qualified Qari, Hafiz, and Mufti with expertise in teaching the Holy Qur\'an, Tajweed, Translation, and Tafseer. Dedicated to nurturing accurate Qur\'anic recitation, deep understanding of the meanings of the Holy Qur\'an, and practical application of Islamic teachings. Committed to providing personalized, student-centered instruction for learners of all ages, fostering both spiritual growth and academic excellence in Islamic education.',
+    achievement: 'Qualified Mufti, Qari, and Hafiz providing personalized student-centered instruction.',
+    subjectsTaught: ["Qur'an Recitation (Nazra)", 'Tajweed', 'Translation of the Holy Qur\'an', 'Tafseer', 'Islamic Studies'],
+    expertise: ["Qur'an with Tajweed", 'Qur\'an Translation', 'Tafseer (Exegesis of the Holy Qur\'an)']
+  },
+  {
+    id: 'f14',
+    name: 'Mr. Shahzad Ahmad',
+    subject: 'Administrative Officer',
+    qualification: 'Administrative Officer',
+    experience: 'Experienced',
+    imageUrl: '/mr_shahzad_admin.png',
+    bio: 'Dedicated and organized Administrative Officer with expertise in managing day-to-day administrative operations and ensuring the smooth functioning of academic activities. Skilled in coordinating with students, parents, and faculty members while maintaining efficient administrative processes and high professional standards. Committed to delivering excellent organizational support, effective communication, and quality service to create a productive and welcoming educational environment.',
+    achievement: 'Ensures smooth and highly efficient day-to-day administrative operations for students, parents, and faculty.'
+  },
+  {
+    id: 'f15',
+    name: 'Mr. Muhammad Khalid',
+    subject: 'Islamic Studies Specialist',
+    qualification: 'Senior Islamic Studies Subject Lead',
+    experience: '15+ Years',
+    imageUrl: '/mr_m_khalid.jpeg',
+    bio: 'Experienced educator specializing in Islamic Studies for O Level and A Level students. Skilled in delivering concept-based instruction with a strong emphasis on critical thinking, ethical values, and exam-focused preparation. Dedicated to helping students develop a comprehensive understanding of Islamic teachings while achieving outstanding results in international curricula.',
+    achievement: 'Renowned for concept-based instruction and ethical values leadership in Islamic Studies.',
+    schools: ['The City School', 'Beaconhouse School System', 'The Avalon High', 'KIPS School'],
+    subjectsTaught: ['Islamic Studies'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level', 'CAIE IGCSE']
+  },
+  {
+    id: 'f16',
+    name: 'Miss Kazma Khalid',
+    subject: 'Islamiyat Specialist',
+    qualification: 'Senior Islamiyat Subject Specialist',
+    experience: '10+ Years',
+    imageUrl: '/miss_kazma_khalid.png',
+    bio: 'Experienced educator specializing in Islamiyat for O Level and IGCSE students. Skilled in delivering concept-based learning, strengthening students\' understanding of Islamic teachings, and providing comprehensive exam-focused preparation. Dedicated to helping students achieve academic excellence through engaging instruction, critical thinking, and personalized guidance aligned with international curricula.',
+    achievement: 'Expert in concept-based learning and personalized guidance for O Level and IGCSE Islamiyat.',
+    schools: ['Beaconhouse School System', 'The City School', 'Lahore Grammar School (LGS)'],
+    subjectsTaught: ['Islamiyat'],
+    curricula: ['Cambridge O Level', 'CAIE IGCSE']
   }
 ];
 
@@ -343,7 +467,7 @@ export const featuresList: FeatureBlock[] = [
 export const testimonialsList: Testimonial[] = [
   {
     id: 't1',
-    quote: "The pedagogical precision at CamFord Academiya transformed my approach to A-Level Physics. Sir Bilal Farooq did not just teach formulas; he showed us the beauty of the design behind the lab experiments. I got 4 A*s and am now heading to Cambridge!",
+    quote: "The pedagogical precision at CamFord Academiya transformed my approach to A-Level Physics. Mr. Bilal Farooq did not just teach formulas; he showed us the beauty of the design behind the lab experiments. I got 4 A*s and am now heading to Cambridge!",
     name: "Zainab Raza",
     level: "A Levels Grad (4 A*)",
     rating: 5,
@@ -359,7 +483,7 @@ export const testimonialsList: Testimonial[] = [
   },
   {
     id: 't3',
-    quote: "Sir Muzammil Ahmed is a legend. His mathematical shortcuts and past paper prediction booklet saved my grades. I got an A* in Mathematics and Further Math. If you want results, CamFord Academiya is the only logical choice in Lahore.",
+    quote: "Mr. Muzammil Ahmed is a legend. His mathematical shortcuts and past paper prediction booklet saved my grades. I got an A* in Mathematics and Further Math. If you want results, CamFord Academiya is the only logical choice in Lahore.",
     name: "Daniyal Alvi",
     level: "A Levels Grad (3 A*)",
     rating: 5,
@@ -375,7 +499,7 @@ export const testimonialsList: Testimonial[] = [
   },
   {
     id: 't5',
-    quote: "The Chemistry practical sessions and comprehensive mock exams prepared me perfectly for my CAIEs. Sir Bilal's notes are incredibly precise and summarize everything we need to know. I scored straight A*s across all my sciences!",
+    quote: "The Chemistry practical sessions and comprehensive mock exams prepared me perfectly for my CAIEs. Mr. Bilal's notes are incredibly precise and summarize everything we need to know. I scored straight A*s across all my sciences!",
     name: "Amina Yusuf",
     level: "O Levels (8 A*s)",
     rating: 5,
