@@ -395,6 +395,19 @@ export const facultyMembers: FacultyMember[] = [
     schools: ['Beaconhouse School System', 'The City School', 'Lahore Grammar School (LGS)'],
     subjectsTaught: ['Islamiyat'],
     curricula: ['Cambridge O Level', 'CAIE IGCSE']
+  },
+  {
+    id: 'f17',
+    name: 'Mr. Sikandar Raza',
+    subject: 'Computer Science Specialist',
+    qualification: 'Senior Computer Science Specialist',
+    experience: 'Experienced',
+    imageUrl: '/mr_sikandar_raza.jpg',
+    bio: 'Computer Science Teacher for O-Level, A-Level, and Edexcel curricula. An experienced educator with teaching experience at Roots International Schools, Beaconhouse Newlands, and Lahore Grammar School (LGS), dedicated to helping students excel in Computer Science through a strong conceptual approach and effective exam preparation.',
+    achievement: 'Dedicated to helping students excel in Computer Science through a strong conceptual approach.',
+    schools: ['Roots International Schools', 'Beaconhouse Newlands', 'Lahore Grammar School (LGS)'],
+    subjectsTaught: ['Computer Science'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level', 'Pearson Edexcel']
   }
 ];
 
