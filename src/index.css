@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0B1C3F;
+  --color-accent: #C9A84C;
+  --color-bg-light: #F8F9FB;
+  --color-text-dark: #1A1A2E;
+  
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --shadow-soft-layered: 0 4px 6px -1px rgba(11, 28, 63, 0.05), 0 2px 4px -1px rgba(11, 28, 63, 0.03), 0 10px 15px -3px rgba(11, 28, 63, 0.05);
+  --shadow-soft-hover: 0 10px 20px -5px rgba(11, 28, 63, 0.1), 0 8px 16px -6px rgba(11, 28, 63, 0.05);
+}
+
+/* Base custom styles to enforce design system rules */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif-academy {
+  font-family: var(--font-serif);
+}
+
+/* Custom rounded corner utility rules to ensure absolute compliance */
+.btn-academy {
+  border-radius: 4px !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-academy {
+  border-radius: 8px !important;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-soft-layered);
+  transition: all 0.3s ease;
+}
+
+.card-academy:hover {
+  box-shadow: var(--shadow-soft-hover);
+}
+
+/* Custom Hide Scrollbar for Achievements horizontal scroll */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card flip styling for faculty */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.group:hover .group-hover\:rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+

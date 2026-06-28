@@ -1,0 +1,24 @@
+.text-cursor-container {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.text-cursor-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.text-cursor-item {
+  position: absolute;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  transform-origin: center;
+  pointer-events: none;
+}

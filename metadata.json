@@ -1,0 +1,6 @@
+{
+  "name": "O/A Levels Academy",
+  "description": "A professional, comprehensive single-page website for an elite O/A Levels Academy in Pakistan, featuring program information, faculty profiles, achievement timelines, testimonial carousels, and online admission forms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
