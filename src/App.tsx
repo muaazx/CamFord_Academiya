@@ -408,7 +408,7 @@ export default function App() {
               full_name: newInquiry.fullName,
               email: newInquiry.email,
               phone: newInquiry.phone,
-              program: newInquiry.level === 'olevel' ? 'O-Levels' : 'A-Levels',
+              program: newInquiry.level === 'olevel' ? 'O-Levels' : newInquiry.level === 'alevel' ? 'A-Levels' : 'Study Abroad Consultancy',
               subjects: newInquiry.subjects,
               comments: newInquiry.message,
               timestamp: newInquiry.timestamp,
@@ -688,6 +688,7 @@ export default function App() {
             <a href="#faculty" onClick={(e) => handleSmoothScroll(e, 'faculty')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Faculty</a>
             <a href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Results</a>
             <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Admissions</a>
+            <a href="#admissions" onClick={(e) => { handleSmoothScroll(e, 'admissions'); setLevel('consultancy'); setSubjects('Study Abroad Consultancy (AR Consultants)'); }} className="text-accent hover:text-accent/90 hover:scale-105 transition-all font-bold text-xs py-2 uppercase tracking-wider">Consultancy</a>
             <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Contact</a>
             
             <button 
@@ -855,6 +856,7 @@ export default function App() {
               <a href="#faculty" onClick={(e) => handleSmoothScroll(e, 'faculty')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Our Faculty</a>
               <a href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Achievements & Results</a>
               <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Admissions Portal</a>
+              <a href="#admissions" onClick={(e) => { handleSmoothScroll(e, 'admissions'); setLevel('consultancy'); setSubjects('Study Abroad Consultancy (AR Consultants)'); }} className="text-accent hover:text-accent/90 font-bold text-base transition-colors py-1">Study Abroad Consultancy</a>
               <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Contact Details</a>
               
               <button 
@@ -1051,6 +1053,9 @@ export default function App() {
                     skewAmount={5}
                     easing="elastic"
                   >
+                    <Card>
+                      <img src="/consultancy.png" alt="Study Abroad Consultancy" />
+                    </Card>
                     <Card>
                       <img src="/banner_swap_1.png" alt="Subjects Group Teaching" />
                     </Card>
@@ -1852,12 +1857,21 @@ export default function App() {
                       <select 
                         id="level"
                         value={level}
-                        onChange={(e) => setLevel(e.target.value)}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          setLevel(val);
+                          if (val === 'consultancy') {
+                            setSubjects('Study Abroad Consultancy (AR Consultants)');
+                          } else if (subjects === 'Study Abroad Consultancy (AR Consultants)') {
+                            setSubjects('');
+                          }
+                        }}
                         className="w-full bg-transparent outline-none text-sm text-text-dark py-1 cursor-pointer"
                       >
                         <option value="">Select Level</option>
                         <option value="olevel">O Levels (Year 10/11)</option>
                         <option value="alevel">A Levels (AS/A2)</option>
+                        <option value="consultancy">Study Abroad Consultancy (AR Consultants)</option>
                       </select>
                       <label 
                         htmlFor="level"
