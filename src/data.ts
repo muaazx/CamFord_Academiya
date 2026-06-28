@@ -408,6 +408,31 @@ export const facultyMembers: FacultyMember[] = [
     schools: ['Roots International Schools', 'Beaconhouse Newlands', 'Lahore Grammar School (LGS)'],
     subjectsTaught: ['Computer Science'],
     curricula: ['Cambridge O Level', 'Cambridge A Level', 'Pearson Edexcel']
+  },
+  {
+    id: 'f18',
+    name: 'Mr. Muhammad Shifa Rana',
+    subject: 'Urdu Specialist',
+    qualification: 'Senior Urdu Subject Lead',
+    experience: 'Experienced',
+    imageUrl: '/sir_shifa_rana.jpg',
+    bio: 'Mr. Muhammad Shifa Rana is an Urdu A & Urdu B Teacher for O-Level and A-Level students. A dedicated educator specializing in Cambridge Urdu curricula, focused on developing strong language proficiency, literary analysis, grammar, and exam-oriented writing skills to help students achieve outstanding academic results.',
+    achievement: 'A dedicated educator specializing in Cambridge Urdu curricula, focused on developing strong language proficiency.',
+    subjectsTaught: ['Urdu A', 'Urdu B', 'Urdu'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f19',
+    name: 'Mr. Ghulam Mujtaba',
+    subject: 'English Specialist',
+    qualification: 'Senior English Language & Literature Subject Lead',
+    experience: 'Experienced',
+    imageUrl: '/mr_ghulam_mujtaba.png',
+    bio: 'Mr. Ghulam Mujtaba is an English Language & English Literature Teacher for O-Level and A-Level students. An experienced educator with a strong background in Cambridge curricula, having taught at Sharif Education Complex, Green Hall Academy, DHA Education System, and Army Public Schools for International Studies. Specializes in developing students\' reading, writing, literary analysis, and exam techniques to achieve excellent academic results.',
+    achievement: 'Specializes in developing students\' reading, writing, literary analysis, and exam techniques to achieve excellent academic results.',
+    schools: ['Sharif Education Complex', 'Green Hall Academy', 'DHA Education System', 'Army Public Schools for International Studies'],
+    subjectsTaught: ['English Language', 'English Literature'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
   }
 ];
 

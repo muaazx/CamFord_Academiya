@@ -1406,59 +1406,126 @@ export default function App() {
             </p>
           </div>
 
-          {/* Faculty Grid with Custom CSS Flip Effect */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {facultyMembers.map((fac) => (
-              <div key={fac.id} className="h-[400px] w-full perspective-1000 group cursor-pointer" onClick={() => setSelectedFaculty(fac)}>
-                <div className="relative w-full h-full text-center transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
-                  
-                  {/* Front Side */}
-                  <div className="absolute w-full h-full bg-white border border-primary/5 rounded-lg shadow-soft-layered p-6 flex flex-col justify-between items-center backface-hidden">
-                    <div className="flex flex-col items-center">
-                      <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-accent/30 shadow-inner mb-4 bg-primary/5">
-                        <img src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                      </div>
-                      <h3 className="font-bold text-primary text-lg font-serif">{fac.name}</h3>
-                      <p className="text-xs font-bold uppercase text-accent tracking-wider font-mono mt-1">{fac.subject}</p>
-                      <p className="text-xs text-text-dark/60 mt-2 font-medium">{fac.qualification}</p>
-                    </div>
-                    
-                    <div className="w-full border-t border-primary/10 pt-4 flex items-center justify-center gap-2">
-                      <span className="text-xs font-medium text-text-dark/50">Experience:</span>
-                      <span className="text-xs font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-sm">{fac.experience}</span>
-                    </div>
-                  </div>
-                  
-                  {/* Back Side (Flipped) */}
-                  <div className="absolute w-full h-full bg-primary text-white rounded-lg p-6 flex flex-col justify-between items-center rotate-y-180 backface-hidden shadow-2xl border-t-4 border-accent">
-                    <div className="space-y-4 text-left w-full">
-                      <h4 className="font-bold text-accent text-sm uppercase tracking-wider font-mono">Philosophy & Focus</h4>
-                      <p className="text-xs text-white/85 leading-relaxed italic">
-                        "{fac.bio}"
-                      </p>
-                      
-                      <div className="space-y-2 text-left text-[11px] bg-white/5 p-3 rounded-sm border border-white/10">
-                        {fac.authorText && (
-                          <p className="text-accent font-semibold flex items-center gap-1.5">
-                            <BookOpen className="w-3.5 h-3.5" />
-                            {fac.authorText}
-                          </p>
-                        )}
-                        <p className="text-white/80 flex items-center gap-1.5 font-light">
-                          <Check className="w-3.5 h-3.5 text-accent shrink-0" />
-                          {fac.achievement}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="text-[10px] text-accent font-bold uppercase tracking-widest font-mono">
-                      CamFord Lead Faculty
+          {/* Categorized Faculty Lists */}
+          <div className="space-y-16">
+            {[
+              {
+                title: "🧪 Science Subjects",
+                subtitle: "Physics (CAIE 5054) • Chemistry (CAIE 5070) • Biology (CAIE 5090)",
+                teacherIds: ['f2', 'f4']
+              },
+              {
+                title: "💻 Computing & Technology",
+                subtitle: "Computer Science (CAIE 2210)",
+                teacherIds: ['f3', 'f17']
+              },
+              {
+                title: "➗ Mathematics",
+                subtitle: "Mathematics (D) (CAIE 4024)",
+                teacherIds: ['f1', 'f2', 'f8']
+              },
+              {
+                title: "📚 Languages",
+                subtitle: "English Language (CAIE 1123) • Urdu A & B",
+                teacherIds: ['f11', 'f19', 'f7', 'f18']
+              },
+              {
+                title: "💼 Commerce & Business",
+                subtitle: "Economics (CAIE 9708) • Business Studies (CAIE 9609) • Accounting (CAIE 9706)",
+                teacherIds: ['f8', 'f9', 'f10']
+              },
+              {
+                title: "🌍 Humanities & Social Sciences",
+                subtitle: "Pakistan Studies (CAIE 2059) • Islamiyat (CAIE 2058) • Qur'an & Islamic Studies",
+                teacherIds: ['f5', 'f6', 'f12', 'f13', 'f15', 'f16']
+              },
+              {
+                title: "📋 Administration & Support",
+                subtitle: "Management & Coordination",
+                teacherIds: ['f14']
+              }
+            ].map((cat, idx) => {
+              const catTeachers = facultyMembers.filter(fac => cat.teacherIds.includes(fac.id));
+              if (catTeachers.length === 0) return null;
+
+              // Sort teachers in the order defined in the category's teacherIds array
+              const sortedTeachers = [...catTeachers].sort((a, b) => {
+                return cat.teacherIds.indexOf(a.id) - cat.teacherIds.indexOf(b.id);
+              });
+
+              return (
+                <div key={idx} className="space-y-8">
+                  {/* Category Header */}
+                  <div className="relative pl-6 py-1">
+                    {/* Decorative gold vertical bar */}
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-sm"></div>
+                    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-primary/5 pb-2">
+                      <h3 className="text-xl sm:text-2xl font-bold text-primary font-serif tracking-tight">
+                        {cat.title}
+                      </h3>
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-accent font-mono bg-accent/5 border border-accent/15 px-3 py-1 rounded-sm">
+                        {cat.subtitle}
+                      </span>
                     </div>
                   </div>
 
+                  {/* Faculty Grid with Custom CSS Flip Effect */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {sortedTeachers.map((fac) => (
+                      <div key={fac.id} className="h-[400px] w-full perspective-1000 group cursor-pointer" onClick={() => setSelectedFaculty(fac)}>
+                        <div className="relative w-full h-full text-center transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
+                          
+                          {/* Front Side */}
+                          <div className="absolute w-full h-full bg-white border border-primary/5 rounded-lg shadow-soft-layered p-6 flex flex-col justify-between items-center backface-hidden">
+                            <div className="flex flex-col items-center">
+                              <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-accent/30 shadow-inner mb-4 bg-primary/5">
+                                <img src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                              </div>
+                              <h3 className="font-bold text-primary text-lg font-serif leading-tight">{fac.name}</h3>
+                              <p className="text-xs font-bold uppercase text-accent tracking-wider font-mono mt-1">{fac.subject}</p>
+                              <p className="text-xs text-text-dark/60 mt-2 font-medium">{fac.qualification}</p>
+                            </div>
+                            
+                            <div className="w-full border-t border-primary/10 pt-4 flex items-center justify-center gap-2">
+                              <span className="text-xs font-medium text-text-dark/50">Experience:</span>
+                              <span className="text-xs font-bold text-primary bg-primary/5 px-2 py-0.5 rounded-sm">{fac.experience}</span>
+                            </div>
+                          </div>
+                          
+                          {/* Back Side (Flipped) */}
+                          <div className="absolute w-full h-full bg-primary text-white rounded-lg p-6 flex flex-col justify-between items-center rotate-y-180 backface-hidden shadow-2xl border-t-4 border-accent">
+                            <div className="space-y-4 text-left w-full">
+                              <h4 className="font-bold text-accent text-sm uppercase tracking-wider font-mono">Philosophy & Focus</h4>
+                              <p className="text-xs text-white/85 leading-relaxed italic">
+                                "{fac.bio}"
+                              </p>
+                              
+                              <div className="space-y-2 text-left text-[11px] bg-white/5 p-3 rounded-sm border border-white/10">
+                                {fac.authorText && (
+                                  <p className="text-accent font-semibold flex items-center gap-1.5">
+                                    <BookOpen className="w-3.5 h-3.5" />
+                                    {fac.authorText}
+                                  </p>
+                                )}
+                                <p className="text-white/80 flex items-center gap-1.5 font-light">
+                                  <Check className="w-3.5 h-3.5 text-accent shrink-0" />
+                                  {fac.achievement}
+                                </p>
+                              </div>
+                            </div>
+                            
+                            <div className="text-[10px] text-accent font-bold uppercase tracking-widest font-mono">
+                              CamFord Lead Faculty
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
         </div>
