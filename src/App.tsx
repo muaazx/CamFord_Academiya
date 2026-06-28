@@ -403,16 +403,16 @@ export default function App() {
         await emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
           import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
-          {
-            to_email: 'camford.academy.edu@gmail.com',
-            from_name: newInquiry.fullName,
-            from_email: newInquiry.email,
-            phone: newInquiry.phone,
-            level: newInquiry.level === 'olevel' ? 'O-Levels' : 'A-Levels',
-            subjects: newInquiry.subjects,
-            message: newInquiry.message,
-            timestamp: newInquiry.timestamp,
-          },
+            {
+              to_email: 'camford.academy.edu@gmail.com',
+              full_name: newInquiry.fullName,
+              email: newInquiry.email,
+              phone: newInquiry.phone,
+              program: newInquiry.level === 'olevel' ? 'O-Levels' : 'A-Levels',
+              subjects: newInquiry.subjects,
+              comments: newInquiry.message,
+              timestamp: newInquiry.timestamp,
+            },
           import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
         );
       } catch (emailErr) {
