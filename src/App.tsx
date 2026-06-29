@@ -1024,6 +1024,37 @@ export default function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Learning Modes Side-by-Side Callout */}
+              <div className="pt-6 border-t border-text-dark/5 space-y-4">
+                <h4 className="text-xs font-bold uppercase tracking-widest text-primary font-mono">Learning Modes</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-5 rounded-lg border border-primary/10 bg-gradient-to-br from-white to-primary/[0.03] shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <MapPin className="w-4 h-4 text-primary" />
+                      </div>
+                      <h4 className="font-bold text-primary text-sm uppercase tracking-wide">Physical Classes</h4>
+                    </div>
+                    <p className="text-xs text-text-dark/70 leading-relaxed font-light">
+                      Attend structured classes at our elite Lahore campus. Features small batch sizes, physical check-ins, and local subject head mentorship.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 rounded-lg border border-accent/20 bg-gradient-to-br from-white to-accent/[0.03] shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                        <Globe className="w-4 h-4 text-accent" />
+                      </div>
+                      <h4 className="font-bold text-primary text-sm uppercase tracking-wide">Online Classes</h4>
+                    </div>
+                    <p className="text-xs text-text-dark/70 leading-relaxed font-light">
+                      Learn live from anywhere globally. Access interactive sessions, recorded lectures, automated portals, and digital homework tracking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             {/* Right – Animated Card Stack */}
