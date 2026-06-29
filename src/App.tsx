@@ -1417,12 +1417,12 @@ export default function App() {
               {
                 title: "🧪 Faculty of Science",
                 subtitle: "Physics (CAIE 5054) • Chemistry (CAIE 5070) • Biology (CAIE 5090)",
-                teacherIds: ['f2', 'f4', 'f20']
+                teacherIds: ['f2', 'f4', 'f20', 'f27']
               },
               {
                 title: "💻 Faculty of Computing and Technology",
                 subtitle: "Computer Science (CAIE 2210)",
-                teacherIds: ['f3', 'f17']
+                teacherIds: ['f3', 'f17', 'f28']
               },
               {
                 title: "➗ Faculty of Mathematics",
@@ -1432,22 +1432,22 @@ export default function App() {
               {
                 title: "📚 Faculty of Languages",
                 subtitle: "English Language (CAIE 1123) • Urdu A & B",
-                teacherIds: ['f11', 'f19', 'f18']
+                teacherIds: ['f11', 'f19', 'f18', 'f25', 'f26']
               },
               {
                 title: "💼 Faculty of Commerce & Business",
                 subtitle: "Economics (CAIE 9708) • Business Studies (CAIE 9609) • Accounting (CAIE 9706)",
-                teacherIds: ['f8', 'f9', 'f10']
+                teacherIds: ['f8', 'f9', 'f10', 'f22']
               },
               {
                 title: "🌍 Faculty of Humanities & Social Sciences",
                 subtitle: "Pakistan Studies (CAIE 2059) • Islamiyat (CAIE 2058)",
-                teacherIds: ['f5', 'f6', 'f7', 'f15', 'f16']
+                teacherIds: ['f5', 'f6', 'f7', 'f15', 'f16', 'f21', 'f23', 'f24']
               },
               {
                 title: "📖 Quran Scholars",
                 subtitle: "Qur'an Recitation, Tajweed, Translation & Tafseer",
-                teacherIds: ['f12', 'f13']
+                teacherIds: ['f12', 'f13', 'f29']
               },
               {
                 title: "📋 Faculty of Administration & Support",
