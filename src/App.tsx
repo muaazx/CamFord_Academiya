@@ -1667,57 +1667,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* 8. TESTIMONIALS CAROUSEL */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="absolute inset-0 bg-primary/95 pointer-events-none"></div>
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
-          
-          <div className="flex justify-center mb-2">
-            <div className="w-12 h-12 bg-accent/20 flex items-center justify-center rounded-full border border-accent/20">
-              <span className="text-3xl text-accent font-serif leading-none">“</span>
-            </div>
-          </div>
-
-          <div className="min-h-[220px] flex items-center justify-center">
-            <div className="space-y-6">
-              <p className="text-lg sm:text-xl md:text-2xl italic font-serif leading-relaxed text-white/90 font-light px-2">
-                "{testimonialsList[activeTestimonial].quote}"
-              </p>
-              
-              <div>
-                <h4 className="font-bold text-accent text-base tracking-wide font-sans uppercase">
-                  {testimonialsList[activeTestimonial].name}
-                </h4>
-                <p className="text-xs text-white/60 font-mono mt-1">
-                  {testimonialsList[activeTestimonial].level} | <span className="text-accent">{testimonialsList[activeTestimonial].role}</span>
-                </p>
-              </div>
-
-              {/* Star Rating Display */}
-              <div className="flex justify-center gap-1">
-                {Array.from({ length: testimonialsList[activeTestimonial].rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Dots Indicator Manual Selector */}
-          <div className="flex justify-center gap-3 pt-6">
-            {testimonialsList.map((_, idx) => (
-              <button 
-                key={idx}
-                onClick={() => setActiveTestimonial(idx)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTestimonial === idx ? 'bg-accent w-6' : 'bg-white/20 hover:bg-white/40'}`}
-                aria-label={`Testimonial slide ${idx + 1}`}
-              ></button>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
       {/* 8.5. INTERNATIONAL EDUCATION CONSULTANCY */}
       <section id="consultancy" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1779,6 +1728,72 @@ export default function App() {
               blurToFocus={true}
               colorShiftOnHover={false}
             />
+          </div>
+
+          {/* GREEN WhatsApp CTA Button */}
+          <div className="flex justify-center mt-12">
+            <a 
+              href="https://wa.me/923054900048?text=Hello%20CamFord%20Academiya,%20I%20am%20interested%20in%20International%20Education%20Consultancy%20and%20admission%20guidance."
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-8 py-4 rounded-[4px] font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-md active:translate-y-0.5"
+            >
+              <svg className="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.729-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.451 5.403.002 9.803-4.394 9.806-9.799.002-2.618-1.016-5.078-2.872-6.931C16.354 2.02 13.902.18 12.01.18 6.602.18 2.205 4.574 2.2 9.979c-.001 1.514.404 2.99 1.173 4.288L2.348 19.9l5.73-1.503c1.3.774 2.68 1.183 4.569 1.185h-.002z" />
+              </svg>
+              Get Admission Guidance
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 8. TESTIMONIALS CAROUSEL */}
+      <section className="py-24 bg-primary text-white overflow-hidden relative">
+        <div className="absolute inset-0 bg-primary/95 pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+          
+          <div className="flex justify-center mb-2">
+            <div className="w-12 h-12 bg-accent/20 flex items-center justify-center rounded-full border border-accent/20">
+              <span className="text-3xl text-accent font-serif leading-none">“</span>
+            </div>
+          </div>
+
+          <div className="min-h-[220px] flex items-center justify-center">
+            <div className="space-y-6">
+              <p className="text-lg sm:text-xl md:text-2xl italic font-serif leading-relaxed text-white/90 font-light px-2">
+                "{testimonialsList[activeTestimonial].quote}"
+              </p>
+              
+              <div>
+                <h4 className="font-bold text-accent text-base tracking-wide font-sans uppercase">
+                  {testimonialsList[activeTestimonial].name}
+                </h4>
+                <p className="text-xs text-white/60 font-mono mt-1">
+                  {testimonialsList[activeTestimonial].level} | <span className="text-accent">{testimonialsList[activeTestimonial].role}</span>
+                </p>
+              </div>
+
+              {/* Star Rating Display */}
+              <div className="flex justify-center gap-1">
+                {Array.from({ length: testimonialsList[activeTestimonial].rating }).map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Dots Indicator Manual Selector */}
+          <div className="flex justify-center gap-3 pt-6">
+            {testimonialsList.map((_, idx) => (
+              <button 
+                key={idx}
+                onClick={() => setActiveTestimonial(idx)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTestimonial === idx ? 'bg-accent w-6' : 'bg-white/20 hover:bg-white/40'}`}
+                aria-label={`Testimonial slide ${idx + 1}`}
+              ></button>
+            ))}
           </div>
 
         </div>
