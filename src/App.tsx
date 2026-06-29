@@ -1761,6 +1761,44 @@ export default function App() {
             />
           </div>
 
+          {/* Consultancy Detail Info Card */}
+          <div className="mt-16 bg-bg-light border border-primary/5 rounded-xl p-8 sm:p-12 shadow-soft-layered max-w-5xl mx-auto space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              {/* Description Column */}
+              <div className="lg:col-span-7 space-y-4 text-left">
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-accent shrink-0" />
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-accent">Established in 2002</span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold font-serif text-primary tracking-tight leading-tight">
+                  22 Years of Excellence in Visa Consulting
+                </h3>
+                <p className="text-sm text-text-dark/75 leading-relaxed font-light">
+                  <strong>AR Education Consultants</strong> is a United Kingdom based organization with its head office in the UK and a regional office in Lahore, Pakistan. Established in 2002, we have been providing professional education and visa consultancy services with strong international presence and successful case experience.
+                </p>
+              </div>
+
+              {/* Highlights Bullet Cards Column */}
+              <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  "Student Visa Consulting",
+                  "University Admission",
+                  "Embassy Visa Filing",
+                  "99% Visa Approval Rate"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-4 rounded-lg bg-white border border-primary/5 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                      <Check className="w-4 h-4 text-accent stroke-[3]" />
+                    </div>
+                    <span className="text-xs font-bold text-primary tracking-wide uppercase font-sans">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+
           {/* GREEN WhatsApp CTA Button */}
           <div className="flex justify-center mt-12">
             <a 
