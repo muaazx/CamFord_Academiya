@@ -49,6 +49,7 @@ import ScrollStack, { ScrollStackItem } from './ScrollStack';
 import TextCursor from './TextCursor';
 import ShapeGrid from './ShapeGrid';
 import CardSwap, { Card } from './CardSwap';
+import Masonry from './Masonry';
 import { useAuth } from './context/AuthContext';
 import { supabase } from './supabase';
 
@@ -688,7 +689,7 @@ export default function App() {
             <a href="#faculty" onClick={(e) => handleSmoothScroll(e, 'faculty')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Faculty</a>
             <a href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Results</a>
             <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Admissions</a>
-            <a href="#admissions" onClick={(e) => { handleSmoothScroll(e, 'admissions'); setLevel('consultancy'); setSubjects('Study Abroad Consultancy (AR Consultants)'); }} className="text-accent hover:text-accent/90 hover:scale-105 transition-all font-bold text-xs py-2 uppercase tracking-wider">Consultancy</a>
+            <a href="#consultancy" onClick={(e) => handleSmoothScroll(e, 'consultancy')} className="text-accent hover:text-accent/90 hover:scale-105 transition-all font-bold text-xs py-2 uppercase tracking-wider">Consultancy</a>
             <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="text-white/80 hover:text-accent font-medium text-xs transition-colors py-2 uppercase tracking-wider">Contact</a>
             
             <button 
@@ -856,7 +857,7 @@ export default function App() {
               <a href="#faculty" onClick={(e) => handleSmoothScroll(e, 'faculty')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Our Faculty</a>
               <a href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Achievements & Results</a>
               <a href="#admissions" onClick={(e) => handleSmoothScroll(e, 'admissions')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Admissions Portal</a>
-              <a href="#admissions" onClick={(e) => { handleSmoothScroll(e, 'admissions'); setLevel('consultancy'); setSubjects('Study Abroad Consultancy (AR Consultants)'); }} className="text-accent hover:text-accent/90 font-bold text-base transition-colors py-1">Study Abroad Consultancy</a>
+              <a href="#consultancy" onClick={(e) => handleSmoothScroll(e, 'consultancy')} className="text-accent hover:text-accent/90 font-bold text-base transition-colors py-1">Study Abroad Consultancy</a>
               <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className="text-white/90 hover:text-accent font-medium text-base transition-colors py-1">Contact Details</a>
               
               <button 
@@ -1712,6 +1713,72 @@ export default function App() {
                 aria-label={`Testimonial slide ${idx + 1}`}
               ></button>
             ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 8.5. INTERNATIONAL EDUCATION CONSULTANCY */}
+      <section id="consultancy" className="py-24 bg-white scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <div className="flex items-center justify-center gap-3">
+              <span className="w-8 h-[2px] bg-accent"></span>
+              <span className="text-xs font-bold uppercase tracking-widest text-accent font-mono">Global Placements</span>
+              <span className="w-8 h-[2px] bg-accent"></span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary font-serif tracking-tight leading-tight">
+              International Education Consultancy
+            </h2>
+            <p className="text-sm sm:text-base text-text-dark/60 leading-relaxed font-light">
+              Explore our global university partnerships, visa assistance, and specialized test prep to guide your academic journey abroad.
+            </p>
+          </div>
+
+          <div className="w-full">
+            <Masonry
+              items={[
+                {
+                  id: "c1",
+                  img: "/consultancy_b1.jpg",
+                  height: 400,
+                },
+                {
+                  id: "c2",
+                  img: "/consultancy_b3.jpg",
+                  height: 320,
+                },
+                {
+                  id: "c3",
+                  img: "/consultancy.png",
+                  height: 480,
+                },
+                {
+                  id: "c4",
+                  img: "/consultancy_b4.jpg",
+                  height: 360,
+                },
+                {
+                  id: "c5",
+                  img: "/consultancy_b5.jpg",
+                  height: 380,
+                },
+                {
+                  id: "c6",
+                  img: "/consultancy_b6.jpg",
+                  height: 250,
+                },
+              ]}
+              ease="power3.out"
+              duration={0.6}
+              stagger={0.05}
+              animateFrom="bottom"
+              scaleOnHover={true}
+              hoverScale={0.95}
+              blurToFocus={true}
+              colorShiftOnHover={false}
+            />
           </div>
 
         </div>
