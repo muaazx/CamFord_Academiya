@@ -2023,7 +2023,7 @@ export default function App() {
               {/* GREEN WhatsApp CTA Button */}
               <div className="pt-4">
                 <a 
-                  href="https://wa.me/923208422445?text=Hello%20CamFord%20Academiya%20I%20am%20interested%20in%20O/A%20Level%20admissions"
+                  href="https://wa.me/923054900048?text=Hello%20CamFord%20Academiya%20I%20am%20interested%20in%20O/A%20Level%20admissions"
                   target="_blank" 
                   rel="noreferrer"
                   className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 rounded-[4px] font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-md active:translate-y-0.5"
@@ -2260,7 +2260,7 @@ export default function App() {
                   Enroll in Class
                 </button>
                 <a 
-                  href={`https://wa.me/923208422445?text=Hello%20CamFord%20Academiya,%20I%20am%20interested%20in%20classes%20with%20${encodeURIComponent(selectedFaculty.name)}.`}
+                  href={`https://wa.me/923054900048?text=Hello%20CamFord%20Academiya,%20I%20am%20interested%20in%20classes%20with%20${encodeURIComponent(selectedFaculty.name)}.`}
                   target="_blank"
                   rel="noreferrer"
                   className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white py-2.5 rounded-sm font-bold text-center text-xs uppercase tracking-wider transition duration-300 flex items-center justify-center gap-1.5"
@@ -2870,7 +2870,7 @@ export default function App() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/923208422445?text=Hello%20CamFord%20Academiya%2C%20I%20have%20an%20admissions%20inquiry."
+        href="https://wa.me/923054900048?text=Hello%20CamFord%20Academiya%2C%20I%20have%20an%20admissions%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 sm:gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white px-3 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 group border border-white/20 active:scale-95 cursor-pointer font-bold font-sans tracking-wide text-xs uppercase"
