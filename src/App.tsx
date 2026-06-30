@@ -54,6 +54,48 @@ import Masonry from './Masonry';
 import { useAuth } from './context/AuthContext';
 import { supabase } from './supabase';
 
+const getLevelBadgeStyles = (level: string) => {
+  switch (level) {
+    case 'pre_olevel':
+      return 'bg-emerald-100 text-emerald-700 border border-emerald-200';
+    case 'olevel':
+      return 'bg-blue-100 text-blue-700 border border-blue-200';
+    case 'igcse':
+      return 'bg-indigo-100 text-indigo-700 border border-indigo-200';
+    case 'alevel':
+      return 'bg-purple-100 text-purple-700 border border-purple-200';
+    case 'edexcel':
+      return 'bg-amber-100 text-amber-700 border border-amber-200';
+    case 'ib_highschool':
+      return 'bg-teal-100 text-teal-700 border border-teal-200';
+    case 'consultancy':
+      return 'bg-rose-100 text-rose-700 border border-rose-200';
+    default:
+      return 'bg-gray-100 text-gray-700 border border-gray-200';
+  }
+};
+
+const getLevelLabel = (level: string) => {
+  switch (level) {
+    case 'pre_olevel':
+      return 'Pre O-Levels';
+    case 'olevel':
+      return 'O-Levels';
+    case 'igcse':
+      return 'IGCSE';
+    case 'alevel':
+      return 'AS /A-Levels';
+    case 'edexcel':
+      return 'Pearson Edexcel';
+    case 'ib_highschool':
+      return 'IB / High School';
+    case 'consultancy':
+      return 'Study Abroad Consultancy';
+    default:
+      return level || 'General Inquiry';
+  }
+};
+
 export default function App() {
   // Auth state hook
   const { user, role, loginWithGoogle, loginWithEmail, registerStudent, logout, isConfigured } = useAuth();
@@ -410,7 +452,7 @@ export default function App() {
               full_name: newInquiry.fullName,
               email: newInquiry.email,
               phone: newInquiry.phone,
-              program: newInquiry.level === 'olevel' ? 'O-Levels' : newInquiry.level === 'alevel' ? 'A-Levels' : 'Study Abroad Consultancy',
+              program: getLevelLabel(newInquiry.level),
               subjects: newInquiry.subjects,
               comments: newInquiry.message,
               timestamp: newInquiry.timestamp,
@@ -427,7 +469,7 @@ export default function App() {
         id: Date.now(),
         type: 'inquiry' as const,
         title: `New Admission Query — ${newInquiry.fullName}`,
-        detail: `${newInquiry.level === 'olevel' ? 'O-Levels' : 'A-Levels'} • ${newInquiry.subjects}`,
+        detail: `${getLevelLabel(newInquiry.level)} • ${newInquiry.subjects}`,
         time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
         read: false,
       };
@@ -1471,7 +1513,7 @@ export default function App() {
               {
                 title: "📚 Faculty of Languages",
                 subtitle: "English Language (CAIE 1123) • Urdu A & B",
-                teacherIds: ['f11', 'f19', 'f18', 'f25', 'f26']
+                teacherIds: ['f11', 'f19', 'f18', 'f25', 'f26', 'f31']
               },
               {
                 title: "💼 Faculty of Commerce & Business",
@@ -2032,8 +2074,12 @@ export default function App() {
                         className="w-full bg-transparent outline-none text-sm text-text-dark py-1 cursor-pointer"
                       >
                         <option value="">Select Level</option>
-                        <option value="olevel">O Levels (Year 10/11)</option>
-                        <option value="alevel">A Levels (AS/A2)</option>
+                        <option value="pre_olevel">Pre O-Levels</option>
+                        <option value="olevel">O-Levels</option>
+                        <option value="igcse">IGCSE</option>
+                        <option value="alevel">AS /A-Levels</option>
+                        <option value="edexcel">Pearson Edexcel</option>
+                        <option value="ib_highschool">IB / High School</option>
                         <option value="consultancy">Study Abroad Consultancy (AR Consultants)</option>
                       </select>
                       <label 
@@ -2762,8 +2808,8 @@ export default function App() {
                             <p className="text-text-dark/60 font-mono text-[10px] mt-0.5">{inq.timestamp || inq.created_at || '—'}</p>
                           </div>
                           <div className="flex items-center gap-2 shrink-0">
-                            <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm ${(inq.level || '') === 'olevel' ? 'bg-blue-100 text-blue-700 border border-blue-200' : 'bg-purple-100 text-purple-700 border border-purple-200'}`}>
-                              {(inq.level || '') === 'olevel' ? 'O-Levels' : 'A-Levels'}
+                            <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm ${getLevelBadgeStyles(inq.level || '')}`}>
+                              {getLevelLabel(inq.level || '')}
                             </span>
                             {/* Delete button */}
                             <button

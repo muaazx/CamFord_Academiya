@@ -609,6 +609,19 @@ export const facultyMembers: FacultyMember[] = [
     achievement: 'Dedicated to building strong technical foundations and enhancing problem-solving skills for O Levels / IGCSE Computer Science & ICT.',
     subjectsTaught: ['Computer Science', 'ICT'],
     curricula: ['Cambridge O Level', 'CAIE IGCSE']
+  },
+  {
+    id: 'f31',
+    name: 'Mr. Muhammad Aseer',
+    subject: 'Urdu Specialist',
+    qualification: 'Senior Urdu Subject Lead',
+    experience: '15+ Years',
+    imageUrl: '/mr_muhammad_aseer.jpg',
+    bio: 'Expert Urdu (Syllabus A & B) Instructor for Cambridge O & A Levels with 15+ Years of Teaching Experience. Former Faculty Member at Lahore Grammar School and Beaconhouse, Dedicated to Developing Strong Language Skills, Critical Thinking, and Outstanding Examination Performance.',
+    achievement: 'Expert Urdu (Syllabus A & B) Instructor with 15+ Years of Teaching Experience.',
+    schools: ['Lahore Grammar School', 'Beaconhouse'],
+    subjectsTaught: ['Urdu A', 'Urdu B', 'Urdu'],
+    curricula: ['Cambridge O Level', 'Cambridge A Level']
   }
 ];
 
