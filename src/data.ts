@@ -2,7 +2,7 @@ export interface Subject {
   id: string;
   name: string;
   code: string;
-  board: 'Cambridge' | 'Edexcel' | 'Cambridge/Edexcel';
+  board: 'Cambridge' | 'Edexcel' | 'Cambridge/Edexcel' | 'Pearson Edexcel / IB' | 'Edexcel/IB';
   iconName: string;
   description: string;
   tagline: string;
@@ -193,6 +193,45 @@ export const aLevelSubjects: Subject[] = [
     iconName: 'scale',
     description: 'Partnership accounts, cash flow statements, cost modeling, and business mergers. Master numerical calculations and analytical ledger reporting.',
     tagline: 'Reconciliation, Ledgers & Consolidated Accounts'
+  }
+];
+
+export const edexcelIbSubjects: Subject[] = [
+  {
+    id: 'e1',
+    name: 'Mathematics',
+    code: 'Edexcel IAL / IB HL',
+    board: 'Pearson Edexcel / IB',
+    iconName: 'calculator',
+    description: 'Advanced algebraic methods, calculus, functions, and mathematical exploration matching the Edexcel International A-Level and IB Diploma standards.',
+    tagline: 'Calculus & Internal Assessment (IA) Guidance'
+  },
+  {
+    id: 'e2',
+    name: 'Physics',
+    code: 'Edexcel IAL / IB HL',
+    board: 'Pearson Edexcel / IB',
+    iconName: 'atom',
+    description: 'Comprehensive prep in quantum mechanics, thermal physics, fields, and wave phenomena aligned with Pearson Edexcel and IB guidelines.',
+    tagline: 'Practical Portfolios & IA Support'
+  },
+  {
+    id: 'e3',
+    name: 'Chemistry',
+    code: 'Edexcel IAL / IB HL',
+    board: 'Pearson Edexcel / IB',
+    iconName: 'beaker',
+    description: 'Mastering organic pathways, transition metals, kinetics, and energetic equations for Pearson Edexcel and IB Chemistry.',
+    tagline: 'Lab Reports & IB IA Mentorship'
+  },
+  {
+    id: 'e4',
+    name: 'Business & Economics',
+    code: 'Edexcel / IB HL',
+    board: 'Pearson Edexcel / IB',
+    iconName: 'trending-up',
+    description: 'Market analysis, global commerce strategies, economic modeling, and policy evaluation for advanced commerce candidates.',
+    tagline: 'Case Studies & Commentary Guidance'
   }
 ];
 
@@ -558,6 +597,18 @@ export const facultyMembers: FacultyMember[] = [
     achievement: 'Dedicated Qur\'an instructor specializing in Tajweed, Qur\'anic Translation, and Tafseer.',
     subjectsTaught: ["Qur'an Recitation (Nazra)", 'Tajweed', 'Translation of the Holy Qur\'an', 'Tafseer'],
     expertise: ["Qur'an with Tajweed", 'Qur\'an Translation', 'Tafseer (Exegesis of the Holy Qur\'an)']
+  },
+  {
+    id: 'f30',
+    name: 'Mr. Muhammad Awais',
+    subject: 'Computer Science & ICT Instructor',
+    qualification: 'Expert Computer Science & ICT Instructor',
+    experience: 'Experienced',
+    imageUrl: '/muhammad_awais.jpg',
+    bio: 'Expert Computer Science & ICT Instructor for Cambridge O Levels / IGCSE, dedicated to building strong technical foundations, enhancing problem-solving skills, and preparing students for academic excellence through concept-based learning and practical application.',
+    achievement: 'Dedicated to building strong technical foundations and enhancing problem-solving skills for O Levels / IGCSE Computer Science & ICT.',
+    subjectsTaught: ['Computer Science', 'ICT'],
+    curricula: ['Cambridge O Level', 'CAIE IGCSE']
   }
 ];
 

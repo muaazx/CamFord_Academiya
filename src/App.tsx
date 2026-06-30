@@ -35,6 +35,7 @@ import {
 import {
   oLevelSubjects,
   aLevelSubjects,
+  edexcelIbSubjects,
   facultyMembers,
   achievementsList,
   featuresList,
@@ -59,7 +60,7 @@ export default function App() {
 
   // Navigation & UI States
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'olevel' | 'alevel'>('olevel');
+  const [activeTab, setActiveTab] = useState<'olevel' | 'alevel' | 'edexcel'>('olevel');
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
 
@@ -1241,20 +1242,26 @@ export default function App() {
                 onClick={() => setActiveTab('olevel')}
                 className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'olevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
               >
-                O Level Program
+                O-Levels / IGCSE Programs
               </button>
               <button 
                 onClick={() => setActiveTab('alevel')}
                 className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'alevel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
               >
-                A Level Program
+                AS & A-Levels
+              </button>
+              <button 
+                onClick={() => setActiveTab('edexcel')}
+                className={`px-3 sm:px-6 py-2 sm:py-2.5 text-[10px] sm:text-xs uppercase tracking-wider font-bold rounded-sm transition-all duration-300 ${activeTab === 'edexcel' ? 'bg-primary text-white shadow-md' : 'text-primary hover:bg-primary/5'}`}
+              >
+                Edexcel & IB Programs
               </button>
             </div>
           </div>
 
           {/* Program Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {(activeTab === 'olevel' ? oLevelSubjects : aLevelSubjects).map((subj) => (
+            {(activeTab === 'olevel' ? oLevelSubjects : activeTab === 'alevel' ? aLevelSubjects : edexcelIbSubjects).map((subj) => (
               <div key={subj.id} className="card-academy p-6 flex flex-col justify-between border border-primary/5 hover:-translate-y-1 transform transition-all duration-300">
                 <div className="space-y-4">
                   <div className="w-12 h-12 bg-primary/5 flex items-center justify-center rounded-sm">
@@ -1454,7 +1461,7 @@ export default function App() {
               {
                 title: "💻 Faculty of Computing and Technology",
                 subtitle: "Computer Science (CAIE 2210)",
-                teacherIds: ['f3', 'f17', 'f28']
+                teacherIds: ['f3', 'f17', 'f28', 'f30']
               },
               {
                 title: "➗ Faculty of Mathematics",
