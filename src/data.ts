@@ -604,7 +604,7 @@ export const facultyMembers: FacultyMember[] = [
     subject: 'Computer Science & ICT Instructor',
     qualification: 'Expert Computer Science & ICT Instructor',
     experience: 'Experienced',
-    imageUrl: '/muhammad_awais.jpg',
+    imageUrl: '/muhammad_awais.png',
     bio: 'Expert Computer Science & ICT Instructor for Cambridge O Levels / IGCSE, dedicated to building strong technical foundations, enhancing problem-solving skills, and preparing students for academic excellence through concept-based learning and practical application.',
     achievement: 'Dedicated to building strong technical foundations and enhancing problem-solving skills for O Levels / IGCSE Computer Science & ICT.',
     subjectsTaught: ['Computer Science', 'ICT'],
