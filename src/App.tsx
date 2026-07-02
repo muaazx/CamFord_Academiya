@@ -1146,6 +1146,27 @@ export default function App() {
                     <Card>
                       <img src="/banner_swap_5.jpg" alt="AJ New Banner" />
                     </Card>
+                    <Card>
+                      <img src="/new1.jpg" alt="New Banner 1" />
+                    </Card>
+                    <Card>
+                      <img src="/new2.jpg" alt="New Banner 2" />
+                    </Card>
+                    <Card>
+                      <img src="/new3.PNG" alt="New Banner 3" />
+                    </Card>
+                    <Card>
+                      <img src="/Uk.PNG" alt="UK Banner" />
+                    </Card>
+                    <Card>
+                      <img src="/usa.PNG" alt="USA Banner" />
+                    </Card>
+                    <Card>
+                      <img src="/canada.PNG" alt="Canada Banner" />
+                    </Card>
+                    <Card>
+                      <img src="/aus.PNG" alt="Australia Banner" />
+                    </Card>
                   </CardSwap>
 
                   {/* Outstanding Badge — desktop only */}

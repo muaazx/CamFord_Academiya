@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, FC, MouseEvent } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, FC, MouseEvent, RefObject } from 'react';
 import { gsap } from 'gsap';
 
 import './Masonry.css';
@@ -41,7 +41,7 @@ const useMedia = (queries: string[], values: number[], defaultValue: number) => 
   return value;
 };
 
-const useMeasure = (): [React.RefObject<HTMLDivElement | null>, { width: number; height: number }] => {
+const useMeasure = (): [RefObject<HTMLDivElement | null>, { width: number; height: number }] => {
   const ref = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
 
