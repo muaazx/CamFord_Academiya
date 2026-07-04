@@ -1147,12 +1147,6 @@ export default function App() {
                       <img src="/banner_swap_5.jpg" alt="AJ New Banner" />
                     </Card>
                     <Card>
-                      <img src="/new1.jpg" alt="New Banner 1" />
-                    </Card>
-                    <Card>
-                      <img src="/new2.jpg" alt="New Banner 2" />
-                    </Card>
-                    <Card>
                       <img src="/new3.PNG" alt="New Banner 3" />
                     </Card>
                     <Card>
