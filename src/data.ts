@@ -242,7 +242,7 @@ export const facultyMembers: FacultyMember[] = [
     subject: 'Mathematics Specialist',
     qualification: 'Senior Mathematics Subject Lead',
     experience: '16+ Years',
-    imageUrl: '/amjad_raza.jpg',
+    imageUrl: '/mr_amjad_farooq.jpg',
     bio: 'Over 16 years of teaching experience, specializing in Mathematics for international curricula. Proven expertise in preparing students for board examinations through concept-based learning, problem-solving techniques, and exam-focused strategies.',
     achievement: 'Trained thousands of students for A*/A grades in O-Level & Edexcel.',
     schools: ['The City School', 'Beaconhouse', 'LACAS'],
