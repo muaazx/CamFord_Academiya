@@ -1585,7 +1585,7 @@ export default function App() {
                           <div className="absolute w-full h-full bg-white border border-primary/5 rounded-lg shadow-soft-layered p-6 flex flex-col justify-between items-center backface-hidden">
                             <div className="flex flex-col items-center">
                               <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-accent/30 shadow-inner mb-4 bg-primary/5">
-                                <img src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                                <img src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" style={{ objectPosition: fac.imagePosition || 'center' }} />
                               </div>
                               <h3 className="font-bold text-primary text-lg font-serif leading-tight">{fac.name}</h3>
                               <p className="text-xs font-bold uppercase text-accent tracking-wider font-mono mt-1">{fac.subject}</p>
@@ -2380,7 +2380,7 @@ export default function App() {
             {/* Left side: Photo & Main Info */}
             <div className="w-full md:w-2/5 bg-primary/5 p-4 sm:p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-primary/10">
               <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-accent shadow-lg mb-4 shrink-0">
-                <img src={selectedFaculty.imageUrl} alt={selectedFaculty.name} className="w-full h-full object-cover" />
+                <img src={selectedFaculty.imageUrl} alt={selectedFaculty.name} className="w-full h-full object-cover" style={{ objectPosition: selectedFaculty.imagePosition || 'center' }} />
               </div>
               <h3 className="text-xl font-bold text-primary font-serif text-center leading-tight">{selectedFaculty.name}</h3>
               <p className="text-xs text-accent font-bold uppercase tracking-wider font-mono text-center mt-2 px-2">{selectedFaculty.subject}</p>

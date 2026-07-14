@@ -22,6 +22,7 @@ export interface FacultyMember {
   subjectsTaught?: string[];
   curricula?: string[];
   expertise?: string[];
+  imagePosition?: string;
 }
 
 export interface Achievement {
@@ -644,7 +645,8 @@ export const facultyMembers: FacultyMember[] = [
     achievement: 'Successfully guided students in mastering computer science concepts through practical learning, logical problem-solving, and effective exam preparation, helping them build a strong foundation for higher education and future careers.',
     schools: ['Roots International School', 'CamFord Academy'],
     subjectsTaught: ['Computer Science'],
-    curricula: ['Cambridge O Level', 'Matric', 'ICS']
+    curricula: ['Cambridge O Level', 'Matric', 'ICS'],
+    imagePosition: 'top'
   }
 ];
 
