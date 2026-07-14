@@ -1518,7 +1518,7 @@ export default function App() {
               {
                 title: "💻 Faculty of Computing and Technology",
                 subtitle: "Computer Science (CAIE 2210)",
-                teacherIds: ['f3', 'f17', 'f28', 'f30']
+                teacherIds: ['f3', 'f17', 'f28', 'f30', 'f32']
               },
               {
                 title: "➗ Faculty of Mathematics",

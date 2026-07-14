@@ -632,6 +632,19 @@ export const facultyMembers: FacultyMember[] = [
     schools: ['Lahore Grammar School', 'Beaconhouse'],
     subjectsTaught: ['Urdu A', 'Urdu B', 'Urdu'],
     curricula: ['Cambridge O Level', 'Cambridge A Level']
+  },
+  {
+    id: 'f32',
+    name: 'Mr. Naveed Zaman',
+    subject: 'Computer Science Instructor',
+    qualification: 'Expert Computer Science Instructor',
+    experience: 'Experienced',
+    imageUrl: '/mr_naveed_zaman.jpg',
+    bio: 'Computer Science Teacher for O-Level, Matric, and ICS students. A dedicated and experienced educator with expertise in programming fundamentals, computer applications, problem-solving, and core computer science concepts. Committed to developing students\' analytical thinking, practical skills, and exam preparation strategies to help them achieve academic success.',
+    achievement: 'Successfully guided students in mastering computer science concepts through practical learning, logical problem-solving, and effective exam preparation, helping them build a strong foundation for higher education and future careers.',
+    schools: ['Roots International School', 'CamFord Academy'],
+    subjectsTaught: ['Computer Science'],
+    curricula: ['Cambridge O Level', 'Matric', 'ICS']
   }
 ];
 
