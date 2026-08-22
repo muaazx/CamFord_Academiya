@@ -221,10 +221,9 @@ The `public/` directory contains a large set of academy images, faculty portrait
 
 ## ✅ Notes for maintainers
 
-- The current `README.md` in the repository is a generated starter and does not describe the actual project; this document replaces that with repository-specific documentation.
-- The package name is still the default `react-example`; consider renaming it if you want the published metadata to match the academy brand.
+- The package metadata uses the project-aligned npm name `camford-academiya`.
 - There is no automated test suite checked into the repository at the moment.
 
 ## 📄 License
 
-No license file is present in the repository snapshot provided here.
+This project is licensed under the MIT License. See `/LICENSE`.
