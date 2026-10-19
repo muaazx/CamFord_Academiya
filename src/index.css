@@ -100,6 +100,28 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotateY(180deg);
 }
 
+.faculty-card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+.faculty-card:focus-visible .faculty-card-inner {
+  transform: rotateY(180deg);
+}
+
+.faculty-card-content {
+  overflow-wrap: anywhere;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faculty-card-inner {
+    transition: none;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }

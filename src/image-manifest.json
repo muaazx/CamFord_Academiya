@@ -1,0 +1,404 @@
+{
+  "/A10.jpg": {
+    "src": "/images/A10-1205.webp",
+    "srcSet": "/images/A10-320.webp 320w, /images/A10-640.webp 640w, /images/A10-1205.webp 1205w",
+    "width": 1205,
+    "height": 1600
+  },
+  "/academy_logo.png": {
+    "src": "/images/academy_logo-192.webp",
+    "srcSet": "/images/academy_logo-192.webp 192w",
+    "width": 192,
+    "height": 177
+  },
+  "/adnan_ashraf.jpg": {
+    "src": "/images/adnan_ashraf-540.webp",
+    "srcSet": "/images/adnan_ashraf-320.webp 320w, /images/adnan_ashraf-540.webp 540w",
+    "width": 540,
+    "height": 773
+  },
+  "/amjad_raza.jpg": {
+    "src": "/images/amjad_raza-485.webp",
+    "srcSet": "/images/amjad_raza-320.webp 320w, /images/amjad_raza-485.webp 485w",
+    "width": 485,
+    "height": 657
+  },
+  "/AQA_2.jpg": {
+    "src": "/images/AQA_2-1280.webp",
+    "srcSet": "/images/AQA_2-320.webp 320w, /images/AQA_2-640.webp 640w, /images/AQA_2-1280.webp 1280w",
+    "width": 1280,
+    "height": 963
+  },
+  "/AQA_3.jpg": {
+    "src": "/images/AQA_3-963.webp",
+    "srcSet": "/images/AQA_3-320.webp 320w, /images/AQA_3-640.webp 640w, /images/AQA_3-963.webp 963w",
+    "width": 963,
+    "height": 1280
+  },
+  "/aus.PNG": {
+    "src": "/images/aus-435.webp",
+    "srcSet": "/images/aus-320.webp 320w, /images/aus-435.webp 435w",
+    "width": 435,
+    "height": 628
+  },
+  "/B2.jpg": {
+    "src": "/images/B2-1205.webp",
+    "srcSet": "/images/B2-320.webp 320w, /images/B2-640.webp 640w, /images/B2-1205.webp 1205w",
+    "width": 1205,
+    "height": 1600
+  },
+  "/banner_1.png": {
+    "src": "/images/banner_1-1239.webp",
+    "srcSet": "/images/banner_1-320.webp 320w, /images/banner_1-640.webp 640w, /images/banner_1-1239.webp 1239w",
+    "width": 1239,
+    "height": 1600
+  },
+  "/banner_2.png": {
+    "src": "/images/banner_2-1200.webp",
+    "srcSet": "/images/banner_2-320.webp 320w, /images/banner_2-640.webp 640w, /images/banner_2-1200.webp 1200w",
+    "width": 1200,
+    "height": 1600
+  },
+  "/banner_3.png": {
+    "src": "/images/banner_3-1600.webp",
+    "srcSet": "/images/banner_3-320.webp 320w, /images/banner_3-640.webp 640w, /images/banner_3-1600.webp 1600w",
+    "width": 1600,
+    "height": 647
+  },
+  "/banner_4.png": {
+    "src": "/images/banner_4-1279.webp",
+    "srcSet": "/images/banner_4-320.webp 320w, /images/banner_4-640.webp 640w, /images/banner_4-1279.webp 1279w",
+    "width": 1279,
+    "height": 1600
+  },
+  "/banner_swap_1.png": {
+    "src": "/images/banner_swap_1-1239.webp",
+    "srcSet": "/images/banner_swap_1-320.webp 320w, /images/banner_swap_1-640.webp 640w, /images/banner_swap_1-1239.webp 1239w",
+    "width": 1239,
+    "height": 1600
+  },
+  "/banner_swap_2.png": {
+    "src": "/images/banner_swap_2-1200.webp",
+    "srcSet": "/images/banner_swap_2-320.webp 320w, /images/banner_swap_2-640.webp 640w, /images/banner_swap_2-1200.webp 1200w",
+    "width": 1200,
+    "height": 1600
+  },
+  "/banner_swap_3.jpg": {
+    "src": "/images/banner_swap_3-1080.webp",
+    "srcSet": "/images/banner_swap_3-320.webp 320w, /images/banner_swap_3-640.webp 640w, /images/banner_swap_3-1080.webp 1080w",
+    "width": 1080,
+    "height": 1080
+  },
+  "/banner_swap_4.png": {
+    "src": "/images/banner_swap_4-1279.webp",
+    "srcSet": "/images/banner_swap_4-320.webp 320w, /images/banner_swap_4-640.webp 640w, /images/banner_swap_4-1279.webp 1279w",
+    "width": 1279,
+    "height": 1600
+  },
+  "/banner_swap_5.jpg": {
+    "src": "/images/banner_swap_5-1600.webp",
+    "srcSet": "/images/banner_swap_5-320.webp 320w, /images/banner_swap_5-640.webp 640w, /images/banner_swap_5-1600.webp 1600w",
+    "width": 1600,
+    "height": 1600
+  },
+  "/canada.PNG": {
+    "src": "/images/canada-438.webp",
+    "srcSet": "/images/canada-320.webp 320w, /images/canada-438.webp 438w",
+    "width": 438,
+    "height": 624
+  },
+  "/consultancy.png": {
+    "src": "/images/consultancy-1580.webp",
+    "srcSet": "/images/consultancy-320.webp 320w, /images/consultancy-640.webp 640w, /images/consultancy-1580.webp 1580w",
+    "width": 1580,
+    "height": 1600
+  },
+  "/consultancy_b1.jpg": {
+    "src": "/images/consultancy_b1-1200.webp",
+    "srcSet": "/images/consultancy_b1-320.webp 320w, /images/consultancy_b1-640.webp 640w, /images/consultancy_b1-1200.webp 1200w",
+    "width": 1200,
+    "height": 1600
+  },
+  "/consultancy_b3.jpg": {
+    "src": "/images/consultancy_b3-1600.webp",
+    "srcSet": "/images/consultancy_b3-320.webp 320w, /images/consultancy_b3-640.webp 640w, /images/consultancy_b3-1600.webp 1600w",
+    "width": 1600,
+    "height": 1066
+  },
+  "/consultancy_b4.jpg": {
+    "src": "/images/consultancy_b4-1600.webp",
+    "srcSet": "/images/consultancy_b4-320.webp 320w, /images/consultancy_b4-640.webp 640w, /images/consultancy_b4-1600.webp 1600w",
+    "width": 1600,
+    "height": 1067
+  },
+  "/consultancy_b5.jpg": {
+    "src": "/images/consultancy_b5-1600.webp",
+    "srcSet": "/images/consultancy_b5-320.webp 320w, /images/consultancy_b5-640.webp 640w, /images/consultancy_b5-1600.webp 1600w",
+    "width": 1600,
+    "height": 1200
+  },
+  "/consultancy_b6.jpg": {
+    "src": "/images/consultancy_b6-1344.webp",
+    "srcSet": "/images/consultancy_b6-320.webp 320w, /images/consultancy_b6-640.webp 640w, /images/consultancy_b6-1344.webp 1344w",
+    "width": 1344,
+    "height": 896
+  },
+  "/H.jpg": {
+    "src": "/images/H-1205.webp",
+    "srcSet": "/images/H-320.webp 320w, /images/H-640.webp 640w, /images/H-1205.webp 1205w",
+    "width": 1205,
+    "height": 1600
+  },
+  "/head_picc.png": {
+    "src": "/images/head_picc-602.webp",
+    "srcSet": "/images/head_picc-320.webp 320w, /images/head_picc-602.webp 602w",
+    "width": 602,
+    "height": 800
+  },
+  "/miss_amina_cs.png": {
+    "src": "/images/miss_amina_cs-767.webp",
+    "srcSet": "/images/miss_amina_cs-320.webp 320w, /images/miss_amina_cs-640.webp 640w, /images/miss_amina_cs-767.webp 767w",
+    "width": 767,
+    "height": 800
+  },
+  "/miss_kazma_khalid.png": {
+    "src": "/images/miss_kazma_khalid-662.webp",
+    "srcSet": "/images/miss_kazma_khalid-320.webp 320w, /images/miss_kazma_khalid-640.webp 640w, /images/miss_kazma_khalid-662.webp 662w",
+    "width": 662,
+    "height": 800
+  },
+  "/miss_najmus_sahr_abbasi.jpeg": {
+    "src": "/images/miss_najmus_sahr_abbasi-610.webp",
+    "srcSet": "/images/miss_najmus_sahr_abbasi-320.webp 320w, /images/miss_najmus_sahr_abbasi-610.webp 610w",
+    "width": 610,
+    "height": 800
+  },
+  "/miss_salaha_akhtar.png": {
+    "src": "/images/miss_salaha_akhtar-800.webp",
+    "srcSet": "/images/miss_salaha_akhtar-320.webp 320w, /images/miss_salaha_akhtar-640.webp 640w, /images/miss_salaha_akhtar-800.webp 800w",
+    "width": 800,
+    "height": 666
+  },
+  "/mr_ali_raza.jpeg": {
+    "src": "/images/mr_ali_raza-571.webp",
+    "srcSet": "/images/mr_ali_raza-320.webp 320w, /images/mr_ali_raza-571.webp 571w",
+    "width": 571,
+    "height": 800
+  },
+  "/mr_amjad_farooq.jpg": {
+    "src": "/images/mr_amjad_farooq-714.webp",
+    "srcSet": "/images/mr_amjad_farooq-320.webp 320w, /images/mr_amjad_farooq-640.webp 640w, /images/mr_amjad_farooq-714.webp 714w",
+    "width": 714,
+    "height": 736
+  },
+  "/mr_ammar.jpg": {
+    "src": "/images/mr_ammar-740.webp",
+    "srcSet": "/images/mr_ammar-320.webp 320w, /images/mr_ammar-640.webp 640w, /images/mr_ammar-740.webp 740w",
+    "width": 740,
+    "height": 800
+  },
+  "/mr_burhan_ali.png": {
+    "src": "/images/mr_burhan_ali-534.webp",
+    "srcSet": "/images/mr_burhan_ali-320.webp 320w, /images/mr_burhan_ali-534.webp 534w",
+    "width": 534,
+    "height": 800
+  },
+  "/mr_ghulam_mujtaba.png": {
+    "src": "/images/mr_ghulam_mujtaba-500.webp",
+    "srcSet": "/images/mr_ghulam_mujtaba-320.webp 320w, /images/mr_ghulam_mujtaba-500.webp 500w",
+    "width": 500,
+    "height": 800
+  },
+  "/mr_hafiz_m_siddique.jpg": {
+    "src": "/images/mr_hafiz_m_siddique-800.webp",
+    "srcSet": "/images/mr_hafiz_m_siddique-320.webp 320w, /images/mr_hafiz_m_siddique-640.webp 640w, /images/mr_hafiz_m_siddique-800.webp 800w",
+    "width": 800,
+    "height": 748
+  },
+  "/mr_haroon_ahmad.jpeg": {
+    "src": "/images/mr_haroon_ahmad-458.webp",
+    "srcSet": "/images/mr_haroon_ahmad-320.webp 320w, /images/mr_haroon_ahmad-458.webp 458w",
+    "width": 458,
+    "height": 458
+  },
+  "/mr_imran.png": {
+    "src": "/images/mr_imran-800.webp",
+    "srcSet": "/images/mr_imran-320.webp 320w, /images/mr_imran-640.webp 640w, /images/mr_imran-800.webp 800w",
+    "width": 800,
+    "height": 800
+  },
+  "/mr_kamran_alam_butt.png": {
+    "src": "/images/mr_kamran_alam_butt-646.webp",
+    "srcSet": "/images/mr_kamran_alam_butt-320.webp 320w, /images/mr_kamran_alam_butt-640.webp 640w, /images/mr_kamran_alam_butt-646.webp 646w",
+    "width": 646,
+    "height": 800
+  },
+  "/mr_m_khalid.jpeg": {
+    "src": "/images/mr_m_khalid-565.webp",
+    "srcSet": "/images/mr_m_khalid-320.webp 320w, /images/mr_m_khalid-565.webp 565w",
+    "width": 565,
+    "height": 800
+  },
+  "/mr_maher_shah.jpg": {
+    "src": "/images/mr_maher_shah-800.webp",
+    "srcSet": "/images/mr_maher_shah-320.webp 320w, /images/mr_maher_shah-640.webp 640w, /images/mr_maher_shah-800.webp 800w",
+    "width": 800,
+    "height": 794
+  },
+  "/mr_mufti_abdullah.png": {
+    "src": "/images/mr_mufti_abdullah-800.webp",
+    "srcSet": "/images/mr_mufti_abdullah-320.webp 320w, /images/mr_mufti_abdullah-640.webp 640w, /images/mr_mufti_abdullah-800.webp 800w",
+    "width": 800,
+    "height": 728
+  },
+  "/mr_muhammad_aseer.jpg": {
+    "src": "/images/mr_muhammad_aseer-714.webp",
+    "srcSet": "/images/mr_muhammad_aseer-320.webp 320w, /images/mr_muhammad_aseer-640.webp 640w, /images/mr_muhammad_aseer-714.webp 714w",
+    "width": 714,
+    "height": 800
+  },
+  "/mr_najaf_ali.jpg": {
+    "src": "/images/mr_najaf_ali-706.webp",
+    "srcSet": "/images/mr_najaf_ali-320.webp 320w, /images/mr_najaf_ali-640.webp 640w, /images/mr_najaf_ali-706.webp 706w",
+    "width": 706,
+    "height": 800
+  },
+  "/mr_naveed_ahmad.jpg": {
+    "src": "/images/mr_naveed_ahmad-608.webp",
+    "srcSet": "/images/mr_naveed_ahmad-320.webp 320w, /images/mr_naveed_ahmad-608.webp 608w",
+    "width": 608,
+    "height": 800
+  },
+  "/mr_ramzan_qadir.png": {
+    "src": "/images/mr_ramzan_qadir-800.webp",
+    "srcSet": "/images/mr_ramzan_qadir-320.webp 320w, /images/mr_ramzan_qadir-640.webp 640w, /images/mr_ramzan_qadir-800.webp 800w",
+    "width": 800,
+    "height": 754
+  },
+  "/mr_sajid_farooq.png": {
+    "src": "/images/mr_sajid_farooq-643.webp",
+    "srcSet": "/images/mr_sajid_farooq-320.webp 320w, /images/mr_sajid_farooq-640.webp 640w, /images/mr_sajid_farooq-643.webp 643w",
+    "width": 643,
+    "height": 800
+  },
+  "/mr_shahzad_admin.png": {
+    "src": "/images/mr_shahzad_admin-591.webp",
+    "srcSet": "/images/mr_shahzad_admin-320.webp 320w, /images/mr_shahzad_admin-591.webp 591w",
+    "width": 591,
+    "height": 800
+  },
+  "/mr_shoaib_ishtiaq.jpg": {
+    "src": "/images/mr_shoaib_ishtiaq-741.webp",
+    "srcSet": "/images/mr_shoaib_ishtiaq-320.webp 320w, /images/mr_shoaib_ishtiaq-640.webp 640w, /images/mr_shoaib_ishtiaq-741.webp 741w",
+    "width": 741,
+    "height": 800
+  },
+  "/mr_sikandar_raza.jpg": {
+    "src": "/images/mr_sikandar_raza-665.webp",
+    "srcSet": "/images/mr_sikandar_raza-320.webp 320w, /images/mr_sikandar_raza-640.webp 640w, /images/mr_sikandar_raza-665.webp 665w",
+    "width": 665,
+    "height": 800
+  },
+  "/muhammad_awais.png": {
+    "src": "/images/muhammad_awais-800.webp",
+    "srcSet": "/images/muhammad_awais-320.webp 320w, /images/muhammad_awais-640.webp 640w, /images/muhammad_awais-800.webp 800w",
+    "width": 800,
+    "height": 800
+  },
+  "/new1.jpg": {
+    "src": "/images/new1-1274.webp",
+    "srcSet": "/images/new1-320.webp 320w, /images/new1-640.webp 640w, /images/new1-1274.webp 1274w",
+    "width": 1274,
+    "height": 1600
+  },
+  "/new2.jpg": {
+    "src": "/images/new2-1285.webp",
+    "srcSet": "/images/new2-320.webp 320w, /images/new2-640.webp 640w, /images/new2-1285.webp 1285w",
+    "width": 1285,
+    "height": 1600
+  },
+  "/new3.PNG": {
+    "src": "/images/new3-442.webp",
+    "srcSet": "/images/new3-320.webp 320w, /images/new3-442.webp 442w",
+    "width": 442,
+    "height": 442
+  },
+  "/qari_hafiz_m_abdur_rahman.jpg": {
+    "src": "/images/qari_hafiz_m_abdur_rahman-800.webp",
+    "srcSet": "/images/qari_hafiz_m_abdur_rahman-320.webp 320w, /images/qari_hafiz_m_abdur_rahman-640.webp 640w, /images/qari_hafiz_m_abdur_rahman-800.webp 800w",
+    "width": 800,
+    "height": 737
+  },
+  "/qari_m_shahfique.jpg.jpeg": {
+    "src": "/images/qari_m_shahfique.jpg-578.webp",
+    "srcSet": "/images/qari_m_shahfique.jpg-320.webp 320w, /images/qari_m_shahfique.jpg-578.webp 578w",
+    "width": 578,
+    "height": 800
+  },
+  "/S.JPG": {
+    "src": "/images/S-1068.webp",
+    "srcSet": "/images/S-320.webp 320w, /images/S-640.webp 640w, /images/S-1068.webp 1068w",
+    "width": 1068,
+    "height": 1600
+  },
+  "/sir_shifa_rana.jpg": {
+    "src": "/images/sir_shifa_rana-780.webp",
+    "srcSet": "/images/sir_shifa_rana-320.webp 320w, /images/sir_shifa_rana-640.webp 640w, /images/sir_shifa_rana-780.webp 780w",
+    "width": 780,
+    "height": 800
+  },
+  "/slider_1.jpg": {
+    "src": "/images/slider_1-1280.webp",
+    "srcSet": "/images/slider_1-320.webp 320w, /images/slider_1-640.webp 640w, /images/slider_1-1280.webp 1280w",
+    "width": 1280,
+    "height": 963
+  },
+  "/slider_2.jpg": {
+    "src": "/images/slider_2-963.webp",
+    "srcSet": "/images/slider_2-320.webp 320w, /images/slider_2-640.webp 640w, /images/slider_2-963.webp 963w",
+    "width": 963,
+    "height": 1280
+  },
+  "/slider_3.jpg": {
+    "src": "/images/slider_3-1600.webp",
+    "srcSet": "/images/slider_3-320.webp 320w, /images/slider_3-640.webp 640w, /images/slider_3-1600.webp 1600w",
+    "width": 1600,
+    "height": 777
+  },
+  "/slider_4.jpg": {
+    "src": "/images/slider_4-1600.webp",
+    "srcSet": "/images/slider_4-320.webp 320w, /images/slider_4-640.webp 640w, /images/slider_4-1600.webp 1600w",
+    "width": 1600,
+    "height": 1200
+  },
+  "/slider_5.jpg": {
+    "src": "/images/slider_5-1600.webp",
+    "srcSet": "/images/slider_5-320.webp 320w, /images/slider_5-640.webp 640w, /images/slider_5-1600.webp 1600w",
+    "width": 1600,
+    "height": 747
+  },
+  "/tabinda_parwer.jpg": {
+    "src": "/images/tabinda_parwer-800.webp",
+    "srcSet": "/images/tabinda_parwer-320.webp 320w, /images/tabinda_parwer-640.webp 640w, /images/tabinda_parwer-800.webp 800w",
+    "width": 800,
+    "height": 741
+  },
+  "/Uk.PNG": {
+    "src": "/images/Uk-442.webp",
+    "srcSet": "/images/Uk-320.webp 320w, /images/Uk-442.webp 442w",
+    "width": 442,
+    "height": 628
+  },
+  "/usa.PNG": {
+    "src": "/images/usa-439.webp",
+    "srcSet": "/images/usa-320.webp 320w, /images/usa-439.webp 439w",
+    "width": 439,
+    "height": 629
+  },
+  "/mr_naveed_zaman.jpg": {
+    "src": "/images/mr_naveed_zaman-534.webp",
+    "srcSet": "/images/mr_naveed_zaman-320.webp 320w, /images/mr_naveed_zaman-534.webp 534w",
+    "width": 534,
+    "height": 800
+  }
+}

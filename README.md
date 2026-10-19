@@ -228,3 +228,18 @@ The `public/` directory contains a large set of academy images, faculty portrait
 ## 📄 License
 
 No license file is present in the repository snapshot provided here.
+
+## Website images
+
+Original images are kept in `assets/image-originals`, outside the deployed public directory.
+The website uses generated WebP images in `public/images` with responsive sizes and lazy loading.
+After adding or replacing an original, regenerate the assets and image manifest:
+
+```sh
+python -m pip install Pillow
+python scripts/optimize_images.py
+```
+
+Use `OptimizedImage` with the original filename (for example, `/mr_imran.png`) and
+an appropriate `sizes` value. It resolves the optimized assets through
+`src/image-manifest.json`. Commit the generated files so builds do not require Python.

@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, FC, MouseEvent, RefObject } from 'react';
 import { gsap } from 'gsap';
+import OptimizedImage from './OptimizedImage';
 
 import './Masonry.css';
 
@@ -58,19 +59,6 @@ const useMeasure = (): [RefObject<HTMLDivElement | null>, { width: number; heigh
   return [ref, size];
 };
 
-const preloadImages = async (urls: string[]) => {
-  await Promise.all(
-    urls.map(
-      src =>
-        new Promise<void>(resolve => {
-          const img = new Image();
-          img.src = src;
-          img.onload = img.onerror = () => resolve();
-        })
-    )
-  );
-};
-
 const Masonry: FC<MasonryProps> = ({
   items,
   ease = 'power3.out',
@@ -89,7 +77,6 @@ const Masonry: FC<MasonryProps> = ({
   );
 
   const [containerRef, { width }] = useMeasure();
-  const [imagesReady, setImagesReady] = useState(false);
 
   const getInitialPosition = (item: any) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -121,10 +108,6 @@ const Masonry: FC<MasonryProps> = ({
     }
   };
 
-  useEffect(() => {
-    preloadImages(items.map(i => i.img)).then(() => setImagesReady(true));
-  }, [items]);
-
   const grid = useMemo(() => {
     if (!width) return [];
 
@@ -148,7 +131,7 @@ const Masonry: FC<MasonryProps> = ({
   const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
-    if (!imagesReady) return;
+    if (!grid.length) return;
 
     grid.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
@@ -190,7 +173,7 @@ const Masonry: FC<MasonryProps> = ({
 
     hasMounted.current = true;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [grid, stagger, animateFrom, blurToFocus, duration, ease]);
 
   const handleMouseEnter = (e: MouseEvent<HTMLDivElement>, item: any) => {
     const element = e.currentTarget;
@@ -256,7 +239,8 @@ const Masonry: FC<MasonryProps> = ({
             onMouseEnter={e => handleMouseEnter(e, item)}
             onMouseLeave={e => handleMouseLeave(e, item)}
           >
-            <div className="item-img" style={{ backgroundImage: `url(${item.img})` }}>
+            <div className="item-img">
+              <OptimizedImage src={item.img} alt="Study abroad information" sizes="(min-width: 1500px) 20vw, (min-width: 1000px) 25vw, (min-width: 600px) 33vw, (min-width: 400px) 50vw, 100vw" className="w-full h-full object-cover rounded-[10px]" />
               {colorShiftOnHover && (
                 <div
                   className="color-overlay"

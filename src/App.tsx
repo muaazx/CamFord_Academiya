@@ -51,6 +51,7 @@ import TextCursor from './TextCursor';
 import ShapeGrid from './ShapeGrid';
 import CardSwap, { Card } from './CardSwap';
 import Masonry from './Masonry';
+import OptimizedImage from './OptimizedImage';
 import { useAuth } from './context/AuthContext';
 import { supabase } from './supabase';
 
@@ -717,7 +718,7 @@ export default function App() {
           {/* Logo / Academy Crest */}
           <a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className="flex items-center gap-2 sm:gap-3 group min-w-0">
             <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white flex items-center justify-center rounded-md shadow-md transition-transform duration-300 group-hover:scale-105 overflow-hidden shrink-0" id="logo-crest">
-              <img src="/academy_logo.png" alt="CamFord Academiya Logo" className="w-full h-full object-contain p-1" />
+              <OptimizedImage sizes="48px" loading="eager" src="/academy_logo.png" alt="CamFord Academiya Logo" className="w-full h-full object-contain p-1" />
             </div>
             <div className="min-w-0">
               <span className="block text-white font-bold tracking-wider text-sm sm:text-xl uppercase font-serif leading-tight">CamFord Academiya</span>
@@ -824,7 +825,7 @@ export default function App() {
                   className="flex items-center gap-2 text-white/95 hover:text-accent focus:outline-none transition-colors cursor-pointer py-1"
                 >
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt="" className="w-8 h-8 rounded-full border-2 border-accent object-cover shrink-0" />
+                    <OptimizedImage src={user.photoURL} alt="" className="w-8 h-8 rounded-full border-2 border-accent object-cover shrink-0" />
                   ) : (
                     <div className="w-8 h-8 rounded-full bg-accent/20 border-2 border-accent text-accent flex items-center justify-center font-bold text-xs uppercase font-mono shrink-0">
                       {user.displayName ? user.displayName.charAt(0) : 'U'}
@@ -1129,37 +1130,37 @@ export default function App() {
                     easing="elastic"
                   >
                     <Card>
-                      <img src="/consultancy.png" alt="Study Abroad Consultancy" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/consultancy.png" alt="Study Abroad Consultancy" />
                     </Card>
                     <Card>
-                      <img src="/banner_swap_1.png" alt="Subjects Group Teaching" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/banner_swap_1.png" alt="Subjects Group Teaching" />
                     </Card>
                     <Card>
-                      <img src="/banner_swap_2.png" alt="Online Chapter" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/banner_swap_2.png" alt="Online Chapter" />
                     </Card>
                     <Card>
-                      <img src="/banner_swap_3.jpg" alt="AJ Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/banner_swap_3.jpg" alt="AJ Banner" />
                     </Card>
                     <Card>
-                      <img src="/banner_swap_4.png" alt="Online Lecture" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/banner_swap_4.png" alt="Online Lecture" />
                     </Card>
                     <Card>
-                      <img src="/banner_swap_5.jpg" alt="AJ New Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/banner_swap_5.jpg" alt="AJ New Banner" />
                     </Card>
                     <Card>
-                      <img src="/new3.PNG" alt="New Banner 3" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/new3.PNG" alt="New Banner 3" />
                     </Card>
                     <Card>
-                      <img src="/Uk.PNG" alt="UK Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/Uk.PNG" alt="UK Banner" />
                     </Card>
                     <Card>
-                      <img src="/usa.PNG" alt="USA Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/usa.PNG" alt="USA Banner" />
                     </Card>
                     <Card>
-                      <img src="/canada.PNG" alt="Canada Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/canada.PNG" alt="Canada Banner" />
                     </Card>
                     <Card>
-                      <img src="/aus.PNG" alt="Australia Banner" />
+                      <OptimizedImage sizes="(min-width: 1024px) 420px, 55vw" src="/aus.PNG" alt="Australia Banner" />
                     </Card>
                   </CardSwap>
 
@@ -1231,7 +1232,7 @@ export default function App() {
                   <div className="relative w-full h-full text-white font-sans flex flex-col justify-end p-6 sm:p-10">
                     {/* Full bleed image background */}
                     <div className="bg-image-container absolute inset-0">
-                      <img src={slide.imageUrl} alt={slide.title} className="w-full h-full object-cover" />
+                      <OptimizedImage sizes="(min-width: 1024px) 600px, 100vw" src={slide.imageUrl} alt={slide.title} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C3F] via-[#0B1C3F]/50 to-transparent" />
                     </div>
                     
@@ -1368,7 +1369,8 @@ export default function App() {
                 {/* Image Card Container */}
                 <div className="relative bg-primary border-2 border-accent/20 rounded-lg overflow-hidden shadow-2xl p-3">
                   <div className="relative aspect-[4/5] rounded overflow-hidden bg-primary/20">
-                    <img 
+                    <OptimizedImage
+                      sizes="(min-width: 640px) 448px, 100vw"
                       src={headTeacher.imageUrl} 
                       alt={headTeacher.name} 
                       className="w-full h-full object-cover object-top transition duration-700 ease-out group-hover:scale-105"
@@ -1578,14 +1580,14 @@ export default function App() {
                   {/* Faculty Grid with Custom CSS Flip Effect */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {sortedTeachers.map((fac) => (
-                      <div key={fac.id} className="h-[400px] w-full perspective-1000 group cursor-pointer" onClick={() => setSelectedFaculty(fac)}>
-                        <div className="relative w-full h-full text-center transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
+                      <div key={fac.id} className="faculty-card h-[400px] w-full perspective-1000 group cursor-pointer" role="button" tabIndex={0} aria-label={`View profile of ${fac.name}`} onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); setSelectedFaculty(fac); } }} onClick={() => setSelectedFaculty(fac)}>
+                        <div className="faculty-card-inner relative w-full h-full text-center transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
                           
                           {/* Front Side */}
-                          <div className="absolute w-full h-full bg-white border border-primary/5 rounded-lg shadow-soft-layered p-6 flex flex-col justify-between items-center backface-hidden">
+                          <div className="absolute w-full h-full overflow-hidden bg-white border border-primary/5 rounded-lg shadow-soft-layered p-6 flex flex-col justify-between items-center backface-hidden">
                             <div className="flex flex-col items-center">
                               <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-accent/30 shadow-inner mb-4 bg-primary/5">
-                                <img src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" style={{ objectPosition: fac.imagePosition || 'center' }} />
+                                <OptimizedImage sizes="112px" src={fac.imageUrl} alt={fac.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" style={{ objectPosition: fac.imagePosition || 'center' }} />
                               </div>
                               <h3 className="font-bold text-primary text-lg font-serif leading-tight">{fac.name}</h3>
                               <p className="text-xs font-bold uppercase text-accent tracking-wider font-mono mt-1">{fac.subject}</p>
@@ -1599,8 +1601,8 @@ export default function App() {
                           </div>
                           
                           {/* Back Side (Flipped) */}
-                          <div className="absolute w-full h-full bg-primary text-white rounded-lg p-6 flex flex-col justify-between items-center rotate-y-180 backface-hidden shadow-2xl border-t-4 border-accent">
-                            <div className="space-y-4 text-left w-full">
+                          <div className="faculty-card-back absolute w-full h-full overflow-hidden bg-primary text-white rounded-lg p-6 flex flex-col gap-4 items-center rotate-y-180 backface-hidden shadow-2xl border-t-4 border-accent">
+                            <div className="faculty-card-content space-y-4 text-left w-full min-h-0 flex-1 overflow-y-auto overscroll-contain pr-2" data-lenis-prevent>
                               <h4 className="font-bold text-accent text-sm uppercase tracking-wider font-mono">Philosophy & Focus</h4>
                               <p className="text-xs text-white/85 leading-relaxed italic">
                                 "{fac.bio}"
@@ -1620,8 +1622,8 @@ export default function App() {
                               </div>
                             </div>
                             
-                            <div className="text-[10px] text-accent font-bold uppercase tracking-widest font-mono">
-                              CamFord Lead Faculty
+                            <div className="shrink-0 text-[10px] text-accent font-bold uppercase tracking-widest font-mono">
+                              View Full Profile
                             </div>
                           </div>
 
@@ -2287,7 +2289,7 @@ export default function App() {
             <div className="lg:col-span-4 space-y-4">
               <a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className="flex items-center gap-3 group">
                 <div className="w-12 h-12 bg-white flex items-center justify-center rounded-md shadow-md transition-transform duration-300 overflow-hidden">
-                  <img src="/academy_logo.png" alt="CamFord Academiya Logo" className="w-full h-full object-contain p-1" />
+                  <OptimizedImage sizes="48px" src="/academy_logo.png" alt="CamFord Academiya Logo" className="w-full h-full object-contain p-1" />
                 </div>
                 <div>
                   <span className="block text-white font-bold tracking-wider text-lg uppercase font-serif">CamFord Academiya</span>
@@ -2380,7 +2382,7 @@ export default function App() {
             {/* Left side: Photo & Main Info */}
             <div className="w-full md:w-2/5 bg-primary/5 p-4 sm:p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-primary/10">
               <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-accent shadow-lg mb-4 shrink-0">
-                <img src={selectedFaculty.imageUrl} alt={selectedFaculty.name} className="w-full h-full object-cover" style={{ objectPosition: selectedFaculty.imagePosition || 'center' }} />
+                <OptimizedImage sizes="144px" loading="eager" src={selectedFaculty.imageUrl} alt={selectedFaculty.name} className="w-full h-full object-cover" style={{ objectPosition: selectedFaculty.imagePosition || 'center' }} />
               </div>
               <h3 className="text-xl font-bold text-primary font-serif text-center leading-tight">{selectedFaculty.name}</h3>
               <p className="text-xs text-accent font-bold uppercase tracking-wider font-mono text-center mt-2 px-2">{selectedFaculty.subject}</p>
@@ -2511,7 +2513,7 @@ export default function App() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-white flex items-center justify-center rounded shadow-sm overflow-hidden p-0.5 border border-primary/10">
-                    <img src="/academy_logo.png" alt="" className="w-full h-full object-contain" />
+                    <OptimizedImage sizes="48px" src="/academy_logo.png" alt="" className="w-full h-full object-contain" />
                   </div>
                   <span className="font-bold text-primary font-serif uppercase text-sm tracking-wider">CamFord Portal</span>
                 </div>
@@ -2695,7 +2697,7 @@ export default function App() {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-primary/5 pb-4 sm:pb-6 gap-3 sm:gap-4">
                 <div className="flex items-center gap-3">
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt="" className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-accent object-cover shrink-0" />
+                    <OptimizedImage src={user.photoURL} alt="" className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-4 border-accent object-cover shrink-0" />
                   ) : (
                     <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-accent/20 border-4 border-accent text-accent flex items-center justify-center font-bold text-xl sm:text-2xl uppercase font-mono shrink-0">
                       {user.displayName ? user.displayName.charAt(0) : 'S'}
